@@ -1,28 +1,20 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="432" height="224" viewBox="0 0 432 224" fill="none" role="img">
+<svg xmlns="http://www.w3.org/2000/svg" width="432" height="198" viewBox="0 0 432 198" fill="none" role="img">
   <title>Hollow Signal</title>
   <defs>
-    <pattern id="proj-hollow-light-d" width="22" height="22" patternUnits="userSpaceOnUse">
-      <circle cx="11.0" cy="11.0" r="1.3" fill="#c8beb0" fill-opacity="0.4"/>
-    </pattern>
   </defs>
-  <rect x="2" y="2" width="428" height="220" rx="16" fill="#fbf6ee" stroke="#d8cfc0" stroke-width="1.5"/>
-  <rect x="2" y="2" width="428" height="220" rx="16" fill="url(#proj-hollow-light-d)"/>
-  <rect x="22.0" y="22.0" width="396.0" height="188.0" rx="14" fill="#22201c"/>
-  <rect x="18.0" y="18.0" width="396.0" height="188.0" rx="14" fill="#f3ece0" stroke="#22201c" stroke-width="1.8"/>
-  <circle cx="42" cy="48" r="7" fill="#e7defc" stroke="#22201c" stroke-width="1.8"/>
-  <text x="58" y="54" font-family="'Fredoka', 'Segoe UI', ui-rounded, -apple-system, BlinkMacSystemFont, sans-serif" font-size="19.5" font-weight="800" fill="#22201c">Hollow Signal</text>
-  <rect x="38.0" y="68.0" width="119.0" height="23.0" rx="7" fill="#22201c"/>
-  <rect x="36.0" y="66.0" width="119.0" height="23.0" rx="7" fill="#e7defc" stroke="#22201c" stroke-width="1.4"/>
-  <text x="95.5" y="81.5" text-anchor="middle" font-family="'DM Mono', ui-monospace, 'Cascadia Code', SFMono-Regular, Menlo, Consolas, monospace" font-size="11" font-weight="700" fill="#22201c">PatriotHack &#x27;26</text>
-  <text x="36" y="115" font-family="'Fredoka', 'Segoe UI', ui-rounded, -apple-system, BlinkMacSystemFont, sans-serif" font-size="14.5" font-weight="500" fill="#66615a">Early-warning forecaster, courier mesh &amp;</text>
-  <text x="36" y="136" font-family="'Fredoka', 'Segoe UI', ui-rounded, -apple-system, BlinkMacSystemFont, sans-serif" font-size="14.5" font-weight="500" fill="#66615a">outbreak tracker for an underground city.</text>
-  <rect x="38.0" y="164.0" width="62.0" height="25.0" rx="7" fill="#22201c"/>
-  <rect x="36.0" y="162.0" width="62.0" height="25.0" rx="7" fill="#d6f2dc" stroke="#22201c" stroke-width="1.5"/>
-  <text x="67.0" y="178.5" text-anchor="middle" font-family="'DM Mono', ui-monospace, 'Cascadia Code', SFMono-Regular, Menlo, Consolas, monospace" font-size="11.5" font-weight="700" fill="#22201c">Python</text>
-  <rect x="108.0" y="164.0" width="97.0" height="25.0" rx="7" fill="#22201c"/>
-  <rect x="106.0" y="162.0" width="97.0" height="25.0" rx="7" fill="#e7defc" stroke="#22201c" stroke-width="1.5"/>
-  <text x="154.5" y="178.5" text-anchor="middle" font-family="'DM Mono', ui-monospace, 'Cascadia Code', SFMono-Regular, Menlo, Consolas, monospace" font-size="11.5" font-weight="700" fill="#22201c">Forecasting</text>
-  <rect x="213.0" y="164.0" width="48.0" height="25.0" rx="7" fill="#22201c"/>
-  <rect x="211.0" y="162.0" width="48.0" height="25.0" rx="7" fill="#cdeff0" stroke="#22201c" stroke-width="1.5"/>
-  <text x="235.0" y="178.5" text-anchor="middle" font-family="'DM Mono', ui-monospace, 'Cascadia Code', SFMono-Regular, Menlo, Consolas, monospace" font-size="11.5" font-weight="700" fill="#22201c">Mesh</text>
+  <rect x="0.75" y="0.75" width="430.5" height="196.5" rx="12" fill="#FFFFFF" stroke="#E3E6E1" stroke-width="1"/>
+  <rect x="24" y="194.5" width="64" height="3" rx="1.5" fill="#0B5D3B"/>
+  <text x="24" y="34" font-family="'JetBrains Mono', Consolas, ui-monospace, SFMono-Regular, Menlo, monospace" font-size="11" font-weight="700" letter-spacing="0.9" fill="#B08A2E">PATRIOTHACK &#x27;26</text>
+  <g transform="translate(394.0,20.0) scale(0.667)">
+    <path d="M7 17L17 7M9 7h8v8" stroke="#55625A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <text x="24" y="66" font-family="'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif" font-size="20" font-weight="700" letter-spacing="-0.3" fill="#16211B">Hollow Signal</text>
+  <text x="24" y="94" font-family="'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif" font-size="13.5" fill="#55625A">Early-warning forecaster, courier mesh and</text>
+  <text x="24" y="115" font-family="'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif" font-size="13.5" fill="#55625A">outbreak truth tracker.</text>
+  <rect x="24.0" y="146.0" width="59" height="24" rx="6" fill="#FFFFFF" stroke="#E3E6E1" stroke-width="1"/>
+  <text x="53.5" y="162.0" text-anchor="middle" font-family="'JetBrains Mono', Consolas, ui-monospace, SFMono-Regular, Menlo, monospace" font-size="11.5" font-weight="500" fill="#55625A">Python</text>
+  <rect x="89.0" y="146.0" width="94" height="24" rx="6" fill="#FFFFFF" stroke="#E3E6E1" stroke-width="1"/>
+  <text x="136.0" y="162.0" text-anchor="middle" font-family="'JetBrains Mono', Consolas, ui-monospace, SFMono-Regular, Menlo, monospace" font-size="11.5" font-weight="500" fill="#55625A">Forecasting</text>
+  <rect x="189.0" y="146.0" width="32" height="24" rx="6" fill="#FFFFFF" stroke="#E3E6E1" stroke-width="1"/>
+  <text x="205.0" y="162.0" text-anchor="middle" font-family="'JetBrains Mono', Consolas, ui-monospace, SFMono-Regular, Menlo, monospace" font-size="11.5" font-weight="500" fill="#55625A">ML</text>
 </svg>

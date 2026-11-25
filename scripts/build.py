@@ -12,7 +12,7 @@ from cards import (
     render_heatmap,
     render_hero,
     render_project_card,
-    render_section_label,
+    render_section_header,
 )
 from fetch import fetch_profile_stats
 from svgkit import esc
@@ -46,8 +46,10 @@ def build() -> None:
     state = fetch_profile_stats(profile)
 
     ASSETS.mkdir(parents=True, exist_ok=True)
+    # Remove any stale SVG files from earlier designs
+    for old in ASSETS.glob("*.svg"):
+        old.unlink()
 
-    # 1. Hero + Social badges + GitHub stats + Section label
     for theme in ("light", "dark"):
         t = tokens[theme]
         _write_svg(f"hero-{theme}.svg", render_hero(profile, t, theme, phone=False))
@@ -56,10 +58,12 @@ def build() -> None:
         for link in profile["links"]:
             _write_svg(f"badge-{link['id']}-{theme}.svg", render_badge(link, t))
 
+        _write_svg(f"label-activity-{theme}.svg", render_section_header("01", "Activity", "redrawn nightly via GitHub Actions", t, phone=False))
+        _write_svg(f"label-activity-phone-{theme}.svg", render_section_header("01", "Activity", "", t, phone=True))
+
         _write_svg(f"github-{theme}.svg", render_github_stats(state, t, theme, phone=False))
         _write_svg(f"github-phone-{theme}.svg", render_github_stats(state, t, theme, phone=True))
 
-        # 6-month numbered heatmap
         cal6 = state["calendar_6m"]
         _write_svg(
             f"graph-6m-{theme}.svg",
@@ -70,7 +74,6 @@ def build() -> None:
             render_heatmap(cal6["days"], cal6["total"], "contributions in the last 6 months", t, theme, "6m", show_numbers=True, phone=True),
         )
 
-        # 12-month heatmap
         cal12 = state["calendar_12m"]
         _write_svg(
             f"graph-12m-{theme}.svg",
@@ -81,7 +84,6 @@ def build() -> None:
             render_heatmap(cal12["days"], cal12["total"], "contributions in the last 12 months", t, theme, "12m", show_numbers=True, phone=True),
         )
 
-        # Yearly heatmaps
         for yr, cal in state["yearly"].items():
             _write_svg(
                 f"graph-{yr}-{theme}.svg",
@@ -92,56 +94,38 @@ def build() -> None:
                 render_heatmap(cal["days"], cal["total"], f"contributions in {yr}", t, theme, yr, show_numbers=False, phone=True),
             )
 
-        # Projects section label + cards
-        _write_svg(
-            f"label-projects-{theme}.svg",
-            render_section_label("Featured Projects", "click any card to inspect the repo", t, theme, phone=False),
-        )
-        _write_svg(
-            f"label-projects-phone-{theme}.svg",
-            render_section_label("Featured Projects", "tap any card to inspect the repo", t, theme, phone=True),
-        )
+        _write_svg(f"label-work-{theme}.svg", render_section_header("02", "Work", "featured full-stack & AI projects", t, phone=False))
+        _write_svg(f"label-work-phone-{theme}.svg", render_section_header("02", "Work", "", t, phone=True))
 
         repo_stars = state.get("repo_stars", {})
         for proj in profile["projects"]:
             stars = int(repo_stars.get(proj["repo"], 0))
-            _write_svg(
-                f"project-{proj['id']}-{theme}.svg",
-                render_project_card(proj, stars, t, theme, phone=False),
-            )
-            _write_svg(
-                f"project-{proj['id']}-phone-{theme}.svg",
-                render_project_card(proj, stars, t, theme, phone=True),
-            )
+            _write_svg(f"project-{proj['id']}-{theme}.svg", render_project_card(proj, stars, t, theme, phone=False))
+            _write_svg(f"project-{proj['id']}-phone-{theme}.svg", render_project_card(proj, stars, t, theme, phone=True))
 
-    # 2. Generate README.md
     blocks: list[str] = []
 
-    # Hero
-    hero_pic = _picture("hero", f"Hi, I'm {profile['display_name']}. {profile['tagline']}")
+    hero_pic = _picture("hero", f"{profile['display_name']} — {profile['title']}. {profile['tagline']}")
     blocks.append(f'<a href="{profile["domain_url"]}">{hero_pic}</a>')
 
-    # Social badges
-    badge_lines = ["<p align=\"center\">"]
+    badge_lines = ['<p align="center">']
     for link in profile["links"]:
-        b_pic = _picture(f"badge-{link['id']}", f"{link['label']} {link.get('handle', '')}".strip(), has_phone=False, height="42")
+        b_pic = _picture(f"badge-{link['id']}", link["label"], has_phone=False, height="38")
         badge_lines.append(f'<a href="{link["url"]}">{b_pic}</a>')
     badge_lines.append("</p>")
     blocks.append("\n".join(badge_lines))
 
-    # On GitHub stats
+    blocks.append(_picture("label-activity", "01 Activity"))
+
     gh_alt = (
-        f"On GitHub: {state['last_year_contributions']:,} contributions in the last year, "
+        f"GitHub activity: {state['last_year_contributions']:,} contributions in the last year, "
         f"{state['current_streak']}-day current streak, {state['longest_streak']}-day longest streak, "
         f"{state['all_time_contributions']:,} contributions since {state['created_year']}, "
         f"{state['public_repos']} public repos, {state['stars_earned']} stars earned."
     )
     blocks.append(_picture("github", gh_alt))
-
-    # 6-month heatmap
     blocks.append(_picture("graph-6m", f"{state['calendar_6m']['total']:,} contributions in the last 6 months"))
 
-    # Collapsible 12-month + yearly heatmaps
     alt_12m = f"{state['calendar_12m']['total']:,} contributions in the last 12 months"
     blocks.append(
         f"<details><summary>Last 12 months: {state['calendar_12m']['total']:,} contributions</summary>\n\n"
@@ -157,8 +141,7 @@ def build() -> None:
             f"</details>"
         )
 
-    # Featured Projects
-    blocks.append(_picture("label-projects", "Featured Projects"))
+    blocks.append(_picture("label-work", "02 Work"))
     proj_lines = ['<p align="center">']
     for proj in profile["projects"]:
         p_pic = _picture(f"project-{proj['id']}", f"{proj['name']}: {proj['line']}", width="49%")
@@ -166,20 +149,19 @@ def build() -> None:
     proj_lines.append("</p>")
     blocks.append("\n".join(proj_lines))
 
-    # Live links + More repos footer
-    more_links = " · ".join(f'<a href="{m["url"]}">{esc(m["name"])}</a>' for m in profile["more"])
     live_links = " · ".join(
         f'<a href="{p["live"]}">{esc(p["name"])} (Live)</a>'
         for p in profile["projects"]
         if p.get("live")
     )
+    more_links = " · ".join(f'<a href="{m["url"]}">{esc(m["name"])}</a>' for m in profile["more"])
     blocks.append(
         f'<p align="center"><sub>Live apps: {live_links}<br>'
-        f'More repos: {more_links}</sub></p>'
+        f'More work: {more_links}</sub></p>'
     )
     blocks.append(
-        f'<p align="center"><sub>Redrawn every night by a GitHub Action · '
-        f'<a href="{profile["domain_url"]}">{esc(profile["domain"])}</a></sub></p>'
+        f'<p align="center"><sub>Styled after <a href="{profile["domain_url"]}">{esc(profile["domain"])}</a> · '
+        f'redrawn every night by GitHub Actions</sub></p>'
     )
 
     README_PATH.write_text("\n\n".join(blocks) + "\n", encoding="utf-8")

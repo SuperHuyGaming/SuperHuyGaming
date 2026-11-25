@@ -1,50 +1,47 @@
 {
   "user": "SuperHuyGaming",
-  "display_name": "Huy",
-  "full_name": "Huy Truong",
-  "monogram": "H",
+  "display_name": "Huy Truong",
+  "title": "Software Engineer",
+  "monogram": "BT",
   "domain": "bentruong.dev",
   "domain_url": "https://bentruong.dev",
-  "tagline": "CS & ML grad student at George Mason building full-stack apps and AI tools.",
+  "resume_url": "https://bentruong.dev/Huy_Truong_Resume.pdf",
+  "tagline": "CS at George Mason. Starting my M.S. in machine learning in January 2027.",
   "created_year": 2022,
   "tags": [
-    {"label": "full-stack apps", "tint": "lx"},
-    {"label": "AI agents & ML", "tint": "rd"},
-    {"label": "Rust & systems", "tint": "x"},
-    {"label": "GMU CS '26 · MS '27", "tint": "yt"}
+    {"label": "Full-Stack Apps"},
+    {"label": "AI Agents"},
+    {"label": "Machine Learning"},
+    {"label": "Deep Learning"}
   ],
   "links": [
     {
-      "id": "li",
-      "label": "LinkedIn",
-      "handle": "",
-      "url": "https://linkedin.com/in/huy-nm-truong",
-      "tint": "lx",
-      "icon": "linkedin"
-    },
-    {
       "id": "site",
       "label": "bentruong.dev",
-      "handle": "",
       "url": "https://bentruong.dev",
-      "tint": "card",
+      "variant": "primary",
       "icon": "globe"
+    },
+    {
+      "id": "resume",
+      "label": "Resume",
+      "url": "https://bentruong.dev/Huy_Truong_Resume.pdf",
+      "variant": "outlined",
+      "icon": "doc"
+    },
+    {
+      "id": "li",
+      "label": "LinkedIn",
+      "url": "https://linkedin.com/in/huy-nm-truong",
+      "variant": "outlined",
+      "icon": "linkedin"
     },
     {
       "id": "mail",
       "label": "Email",
-      "handle": "",
       "url": "mailto:bentruong.swe@gmail.com",
-      "tint": "yt",
+      "variant": "outlined",
       "icon": "mail"
-    },
-    {
-      "id": "gh",
-      "label": "GitHub",
-      "handle": "@SuperHuyGaming",
-      "url": "https://github.com/SuperHuyGaming",
-      "tint": "x",
-      "icon": "github"
     }
   ],
   "projects": [
@@ -52,10 +49,9 @@
       "id": "badminton",
       "name": "Mason Badminton Connect",
       "repo": "GMU-Badminton-App",
-      "badge": "500+ players · live",
-      "line": "Court booking, partner matchmaking & tournament finder for GMU's club.",
-      "chips": [["React", "lx"], ["Kafka", "rd"], ["Redis", "yt"], ["Gemini", "x"]],
-      "tint": "lx",
+      "overline": "500+ PLAYERS · LIVE",
+      "line": "Court booking, partner matchmaking and a tournament finder for GMU's badminton club.",
+      "chips": ["React", "Express", "MongoDB", "Kafka", "Redis", "Gemini"],
       "url": "https://github.com/SuperHuyGaming/GMU-Badminton-App",
       "live": "https://gmubadmintonschedule.bentruong.dev/"
     },
@@ -63,38 +59,34 @@
       "id": "syllabus",
       "name": "Syllabus Searcher",
       "repo": "Syllabus-Searcher",
-      "badge": "1,000+ syllabi · live",
-      "line": "Full-text search across GMU CS course syllabi by course, term & prof.",
-      "chips": [["React", "lx"], ["Python", "li"], ["AWS Lambda", "rd"], ["Supabase", "bd"]],
-      "tint": "li",
+      "overline": "1,000+ SYLLABI · LIVE",
+      "line": "Course syllabi across schools since Fall 2022 in one place, with full-text search.",
+      "chips": ["React", "Python", "AWS Lambda", "DynamoDB", "Supabase"],
       "url": "https://github.com/SuperHuyGaming/Syllabus-Searcher",
       "live": "https://findmysyllabus.bentruong.dev/"
+    },
+    {
+      "id": "flyer",
+      "name": "Tournament Flyer Reader",
+      "repo": "badminton-tournament-finder",
+      "overline": "COMPUTER VISION",
+      "line": "Turns tournament flyers on Instagram into clean, structured event listings.",
+      "chips": ["Python", "GPT-4o", "Kafka"],
+      "url": "https://github.com/SuperHuyGaming/badminton-tournament-finder"
     },
     {
       "id": "hollow",
       "name": "Hollow Signal",
       "repo": "hollow-signal",
-      "badge": "PatriotHack '26",
-      "line": "Early-warning forecaster, courier mesh & outbreak tracker for an underground city.",
-      "chips": [["Python", "li"], ["Forecasting", "x"], ["Mesh", "bd"]],
-      "tint": "x",
+      "overline": "PATRIOTHACK '26",
+      "line": "Early-warning forecaster, courier mesh and outbreak truth tracker.",
+      "chips": ["Python", "Forecasting", "ML"],
       "url": "https://github.com/SuperHuyGaming/hollow-signal"
-    },
-    {
-      "id": "mech",
-      "name": "Mech Royale",
-      "repo": "mech-royale",
-      "badge": "Buildathon '26",
-      "line": "Autonomous Rust combat bot engineered for the GMUNVIS Builders Buildathon.",
-      "chips": [["Rust", "rd"], ["AI Bot", "yt"], ["Systems", "lx"]],
-      "tint": "rd",
-      "url": "https://github.com/SuperHuyGaming/mech-royale"
     }
   ],
   "more": [
-    {"name": "Tournament Flyer Reader", "url": "https://github.com/SuperHuyGaming/badminton-tournament-finder"},
-    {"name": "Shopping Sessions (Rust)", "url": "https://github.com/SuperHuyGaming/shopping-sessions"},
-    {"name": "Blast Radius", "url": "https://github.com/SuperHuyGaming/blast-radius"},
+    {"name": "C Error Tutor (PyTorch · LoRA)", "url": "https://bentruong.dev/#work"},
+    {"name": "Handwritten Digit Classifier (98% PyTorch)", "url": "https://bentruong.dev/#work"},
     {"name": "Portfolio Source", "url": "https://github.com/SuperHuyGaming/HuyResume"}
   ]
 }

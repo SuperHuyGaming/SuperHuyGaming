@@ -1,12 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="97" height="44" viewBox="0 0 97 44" fill="none" role="img">
+<svg xmlns="http://www.w3.org/2000/svg" width="89" height="38" viewBox="0 0 89 38" fill="none" role="img">
   <title>Email</title>
   <defs>
   </defs>
-  <rect x="5.5" y="5.5" width="90.0" height="37.0" rx="10" fill="#0b0d1a"/>
-  <rect x="2.0" y="2.0" width="90.0" height="37.0" rx="10" fill="#8c3543" stroke="#0b0d1a" stroke-width="1.8"/>
-  <g transform="translate(14.0,11.0) scale(0.750)">
-    <rect x="3" y="5" width="18" height="14" rx="2.5" stroke="#f3f1ff" stroke-width="2.1"/>
-    <path d="M4 7l8 6 8-6" stroke="#f3f1ff" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="0.75" y="0.75" width="87.5" height="36.5" rx="8" fill="#141D18" stroke="#25312A" stroke-width="1"/>
+  <g transform="translate(14.0,11.0) scale(0.667)">
+    <rect x="3" y="5" width="18" height="14" rx="2.5" stroke="#4CC38A" stroke-width="1.9"/>
+    <path d="M4 7l8 6 8-6" stroke="#4CC38A" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/>
   </g>
-  <text x="39" y="25.5" font-family="'Fredoka', 'Segoe UI', ui-rounded, -apple-system, BlinkMacSystemFont, sans-serif" font-size="14" font-weight="700" fill="#f3f1ff">Email</text>
+  <text x="38" y="23.5" font-family="'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif" font-size="13.5" font-weight="600" fill="#E8EEEA">Email</text>
 </svg>

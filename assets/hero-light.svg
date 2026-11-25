@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="222" viewBox="0 0 880 222" fill="none" role="img">
+  <title>Hi, I&#x27;m Huy</title>
+  <defs>
+    <pattern id="hero-dots-light-d" width="24" height="24" patternUnits="userSpaceOnUse">
+      <circle cx="12.0" cy="12.0" r="1.4" fill="#c8beb0" fill-opacity="0.45"/>
+    </pattern>
+  </defs>
+  <rect x="2" y="2" width="876" height="218" rx="18" fill="#fbf6ee" stroke="#d8cfc0" stroke-width="1.5"/>
+  <rect x="2" y="2" width="876" height="218" rx="18" fill="url(#hero-dots-light-d)"/>
+  <rect x="42" y="48" width="74" height="74" rx="18" fill="#ff5a36" stroke="#22201c" stroke-width="2"/>
+  <rect x="36.0" y="42.0" width="74.0" height="74.0" rx="18" fill="#fbf6ee" stroke="#22201c" stroke-width="2.5"/>
+  <text x="73.0" y="94.0" text-anchor="middle" font-family="'Fredoka', 'Segoe UI', ui-rounded, -apple-system, BlinkMacSystemFont, sans-serif" font-size="46" font-weight="800" fill="#22201c">H</text>
+  <text x="138" y="86" font-family="'Fredoka', 'Segoe UI', ui-rounded, -apple-system, BlinkMacSystemFont, sans-serif" font-size="44" font-weight="800" letter-spacing="-0.8" fill="#22201c">Hi, I&#x27;m</text>
+  <rect x="292.0" y="46.0" width="108.0" height="56.0" rx="13" fill="#22201c"/>
+  <rect x="288.0" y="42.0" width="108.0" height="56.0" rx="13" fill="#ffd3cf" stroke="#22201c" stroke-width="2"/>
+  <text x="342.0" y="84.0" text-anchor="middle" font-family="'Fredoka', 'Segoe UI', ui-rounded, -apple-system, BlinkMacSystemFont, sans-serif" font-size="42" font-weight="800" fill="#22201c">Huy</text>
+  <g transform="rotate(4 772.5 49.0)">
+  <rect x="702.5" y="33.5" width="147.0" height="38.0" rx="10" fill="#22201c"/>
+  <rect x="699.0" y="30.0" width="147.0" height="38.0" rx="10" fill="#ff5a36" stroke="#22201c" stroke-width="2"/>
+    <text x="772.5" y="54.0" text-anchor="middle" font-family="'DM Mono', ui-monospace, 'Cascadia Code', SFMono-Regular, Menlo, Consolas, monospace" font-size="15" font-weight="700" fill="#22201c">bentruong.dev</text>
+  </g>
+  <text x="138" y="128" font-family="'Fredoka', 'Segoe UI', ui-rounded, -apple-system, BlinkMacSystemFont, sans-serif" font-size="16.5" font-weight="500" fill="#66615a">CS &amp; ML grad student at George Mason building full-stack apps and AI tools.</text>
+  <rect x="140.5" y="154.5" width="130.0" height="30.0" rx="8" fill="#22201c"/>
+  <rect x="138.0" y="152.0" width="130.0" height="30.0" rx="8" fill="#cfe6ff" stroke="#22201c" stroke-width="1.5"/>
+  <text x="203.0" y="171.6" text-anchor="middle" font-family="'Fredoka', 'Segoe UI', ui-rounded, -apple-system, BlinkMacSystemFont, sans-serif" font-size="13" font-weight="700" fill="#22201c">full-stack apps</text>
+  <rect x="282.5" y="154.5" width="123.0" height="30.0" rx="8" fill="#22201c"/>
+  <rect x="280.0" y="152.0" width="123.0" height="30.0" rx="8" fill="#ffe1b8" stroke="#22201c" stroke-width="1.5"/>
+  <text x="341.5" y="171.6" text-anchor="middle" font-family="'Fredoka', 'Segoe UI', ui-rounded, -apple-system, BlinkMacSystemFont, sans-serif" font-size="13" font-weight="700" fill="#22201c">AI agents &amp; ML</text>
+  <rect x="417.5" y="154.5" width="128.0" height="30.0" rx="8" fill="#22201c"/>
+  <rect x="415.0" y="152.0" width="128.0" height="30.0" rx="8" fill="#e7defc" stroke="#22201c" stroke-width="1.5"/>
+  <text x="479.0" y="171.6" text-anchor="middle" font-family="'Fredoka', 'Segoe UI', ui-rounded, -apple-system, BlinkMacSystemFont, sans-serif" font-size="13" font-weight="700" fill="#22201c">Rust &amp; systems</text>
+  <rect x="557.5" y="154.5" width="150.0" height="30.0" rx="8" fill="#22201c"/>
+  <rect x="555.0" y="152.0" width="150.0" height="30.0" rx="8" fill="#ffd3cf" stroke="#22201c" stroke-width="1.5"/>
+  <text x="630.0" y="171.6" text-anchor="middle" font-family="'Fredoka', 'Segoe UI', ui-rounded, -apple-system, BlinkMacSystemFont, sans-serif" font-size="13" font-weight="700" fill="#22201c">GMU CS &#x27;26 · MS &#x27;27</text>
+</svg>

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="122" height="44" viewBox="0 0 122 44" fill="none" role="img">
+  <title>LinkedIn</title>
+  <defs>
+  </defs>
+  <rect x="5.5" y="5.5" width="115.0" height="37.0" rx="10" fill="#22201c"/>
+  <rect x="2.0" y="2.0" width="115.0" height="37.0" rx="10" fill="#cfe6ff" stroke="#22201c" stroke-width="1.8"/>
+  <g transform="translate(14.0,11.0) scale(0.750)">
+    <rect x="3" y="3" width="18" height="18" rx="4" stroke="#22201c" stroke-width="2.1"/>
+    <circle cx="8" cy="8.5" r="1.2" fill="#22201c"/>
+    <path d="M8 11.5v5.5M12 17v-5.5M12 13.5c0-1.6 1.2-2.2 2.2-2.2 1.2 0 2 .8 2 2.4V17" stroke="#22201c" stroke-width="2" stroke-linecap="round"/>
+  </g>
+  <text x="39" y="25.5" font-family="'Fredoka', 'Segoe UI', ui-rounded, -apple-system, BlinkMacSystemFont, sans-serif" font-size="14" font-weight="700" fill="#22201c">LinkedIn</text>
+</svg>

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="64" viewBox="0 0 880 64" fill="none" role="img">
+  <title>Featured Projects</title>
+  <defs>
+    <pattern id="lbl-dots-dark-d" width="24" height="24" patternUnits="userSpaceOnUse">
+      <circle cx="12.0" cy="12.0" r="1.4" fill="#343a62" fill-opacity="0.45"/>
+    </pattern>
+  </defs>
+  <rect x="2" y="2" width="876" height="60" rx="14" fill="#181b2e" stroke="#30365c" stroke-width="1.5"/>
+  <rect x="2" y="2" width="876" height="60" rx="14" fill="url(#lbl-dots-dark-d)"/>
+  <text x="24" y="40" font-family="'Fredoka', 'Segoe UI', ui-rounded, -apple-system, BlinkMacSystemFont, sans-serif" font-size="23" font-weight="800" fill="#f3f1ff">Featured Projects</text>
+  <text x="856" y="39" text-anchor="end" font-family="'DM Mono', ui-monospace, 'Cascadia Code', SFMono-Regular, Menlo, Consolas, monospace" font-size="13" fill="#b8b6d4">click any card to inspect the repo</text>
+</svg>

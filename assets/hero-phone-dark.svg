@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="440" height="290" viewBox="0 0 440 290" fill="none" role="img">
+  <title>Hi, I&#x27;m Huy</title>
+  <defs>
+    <pattern id="hero-dots-dark-p" width="24" height="24" patternUnits="userSpaceOnUse">
+      <circle cx="12.0" cy="12.0" r="1.4" fill="#343a62" fill-opacity="0.45"/>
+    </pattern>
+  </defs>
+  <rect x="2" y="2" width="436" height="286" rx="18" fill="#181b2e" stroke="#30365c" stroke-width="1.5"/>
+  <rect x="2" y="2" width="436" height="286" rx="18" fill="url(#hero-dots-dark-p)"/>
+  <rect x="29" y="29" width="56" height="56" rx="14" fill="#ff7a59" stroke="#0b0d1a" stroke-width="2"/>
+  <rect x="24.0" y="24.0" width="56.0" height="56.0" rx="14" fill="#fbf6ee" stroke="#0b0d1a" stroke-width="2.2"/>
+  <text x="52.0" y="64.0" text-anchor="middle" font-family="'Fredoka', 'Segoe UI', ui-rounded, -apple-system, BlinkMacSystemFont, sans-serif" font-size="34" font-weight="800" fill="#22201c">H</text>
+  <g transform="rotate(3 353.5 46.0)">
+  <rect x="294.0" y="33.0" width="125.0" height="32.0" rx="9" fill="#0b0d1a"/>
+  <rect x="291.0" y="30.0" width="125.0" height="32.0" rx="9" fill="#ff7a59" stroke="#0b0d1a" stroke-width="1.8"/>
+    <text x="353.5" y="51.0" text-anchor="middle" font-family="'DM Mono', ui-monospace, 'Cascadia Code', SFMono-Regular, Menlo, Consolas, monospace" font-size="13" font-weight="700" fill="#15172b">bentruong.dev</text>
+  </g>
+  <text x="24" y="130" font-family="'Fredoka', 'Segoe UI', ui-rounded, -apple-system, BlinkMacSystemFont, sans-serif" font-size="36" font-weight="800" fill="#f3f1ff">Hi, I&#x27;m</text>
+  <rect x="149.5" y="97.5" width="86.0" height="46.0" rx="11" fill="#0b0d1a"/>
+  <rect x="146.0" y="94.0" width="86.0" height="46.0" rx="11" fill="#8c3543" stroke="#0b0d1a" stroke-width="2"/>
+  <text x="189.0" y="128" text-anchor="middle" font-family="'Fredoka', 'Segoe UI', ui-rounded, -apple-system, BlinkMacSystemFont, sans-serif" font-size="34" font-weight="800" fill="#f3f1ff">Huy</text>
+  <text x="24" y="166" font-family="'Fredoka', 'Segoe UI', ui-rounded, -apple-system, BlinkMacSystemFont, sans-serif" font-size="15" font-weight="500" fill="#b8b6d4">CS &amp; ML grad student at George Mason</text>
+  <text x="24" y="188" font-family="'Fredoka', 'Segoe UI', ui-rounded, -apple-system, BlinkMacSystemFont, sans-serif" font-size="15" font-weight="500" fill="#b8b6d4">building full-stack apps and AI tools.</text>
+  <rect x="26.0" y="212.0" width="122.0" height="28.0" rx="8" fill="#0b0d1a"/>
+  <rect x="24.0" y="210.0" width="122.0" height="28.0" rx="8" fill="#27508a" stroke="#0b0d1a" stroke-width="1.5"/>
+  <text x="85.0" y="228.4" text-anchor="middle" font-family="'Fredoka', 'Segoe UI', ui-rounded, -apple-system, BlinkMacSystemFont, sans-serif" font-size="12.5" font-weight="700" fill="#f3f1ff">full-stack apps</text>
+  <rect x="158.0" y="212.0" width="116.0" height="28.0" rx="8" fill="#0b0d1a"/>
+  <rect x="156.0" y="210.0" width="116.0" height="28.0" rx="8" fill="#8a5620" stroke="#0b0d1a" stroke-width="1.5"/>
+  <text x="214.0" y="228.4" text-anchor="middle" font-family="'Fredoka', 'Segoe UI', ui-rounded, -apple-system, BlinkMacSystemFont, sans-serif" font-size="12.5" font-weight="700" fill="#f3f1ff">AI agents &amp; ML</text>
+  <rect x="284.0" y="212.0" width="120.0" height="28.0" rx="8" fill="#0b0d1a"/>
+  <rect x="282.0" y="210.0" width="120.0" height="28.0" rx="8" fill="#564396" stroke="#0b0d1a" stroke-width="1.5"/>
+  <text x="342.0" y="228.4" text-anchor="middle" font-family="'Fredoka', 'Segoe UI', ui-rounded, -apple-system, BlinkMacSystemFont, sans-serif" font-size="12.5" font-weight="700" fill="#f3f1ff">Rust &amp; systems</text>
+  <rect x="26.0" y="248.0" width="142.0" height="28.0" rx="8" fill="#0b0d1a"/>
+  <rect x="24.0" y="246.0" width="142.0" height="28.0" rx="8" fill="#8c3543" stroke="#0b0d1a" stroke-width="1.5"/>
+  <text x="95.0" y="264.4" text-anchor="middle" font-family="'Fredoka', 'Segoe UI', ui-rounded, -apple-system, BlinkMacSystemFont, sans-serif" font-size="12.5" font-weight="700" fill="#f3f1ff">GMU CS &#x27;26 · MS &#x27;27</text>
+</svg>

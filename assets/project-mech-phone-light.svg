@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="432" height="228" viewBox="0 0 432 228" fill="none" role="img">
+  <title>Mech Royale</title>
+  <defs>
+    <pattern id="proj-mech-light-p" width="22" height="22" patternUnits="userSpaceOnUse">
+      <circle cx="11.0" cy="11.0" r="1.3" fill="#c8beb0" fill-opacity="0.4"/>
+    </pattern>
+  </defs>
+  <rect x="2" y="2" width="428" height="224" rx="16" fill="#fbf6ee" stroke="#d8cfc0" stroke-width="1.5"/>
+  <rect x="2" y="2" width="428" height="224" rx="16" fill="url(#proj-mech-light-p)"/>
+  <rect x="22.0" y="22.0" width="396.0" height="192.0" rx="14" fill="#22201c"/>
+  <rect x="18.0" y="18.0" width="396.0" height="192.0" rx="14" fill="#f3ece0" stroke="#22201c" stroke-width="1.8"/>
+  <circle cx="42" cy="48" r="7" fill="#ffe1b8" stroke="#22201c" stroke-width="1.8"/>
+  <text x="58" y="54" font-family="'Fredoka', 'Segoe UI', ui-rounded, -apple-system, BlinkMacSystemFont, sans-serif" font-size="19.5" font-weight="800" fill="#22201c">Mech Royale</text>
+  <rect x="38.0" y="68.0" width="112.0" height="23.0" rx="7" fill="#22201c"/>
+  <rect x="36.0" y="66.0" width="112.0" height="23.0" rx="7" fill="#ffe1b8" stroke="#22201c" stroke-width="1.4"/>
+  <text x="92.0" y="81.5" text-anchor="middle" font-family="'DM Mono', ui-monospace, 'Cascadia Code', SFMono-Regular, Menlo, Consolas, monospace" font-size="11" font-weight="700" fill="#22201c">Buildathon &#x27;26</text>
+  <text x="36" y="115" font-family="'Fredoka', 'Segoe UI', ui-rounded, -apple-system, BlinkMacSystemFont, sans-serif" font-size="14.5" font-weight="500" fill="#66615a">Autonomous Rust combat bot engineered for the</text>
+  <text x="36" y="136" font-family="'Fredoka', 'Segoe UI', ui-rounded, -apple-system, BlinkMacSystemFont, sans-serif" font-size="14.5" font-weight="500" fill="#66615a">GMUNVIS Builders Buildathon.</text>
+  <rect x="38.0" y="168.0" width="48.0" height="25.0" rx="7" fill="#22201c"/>
+  <rect x="36.0" y="166.0" width="48.0" height="25.0" rx="7" fill="#ffe1b8" stroke="#22201c" stroke-width="1.5"/>
+  <text x="60.0" y="182.5" text-anchor="middle" font-family="'DM Mono', ui-monospace, 'Cascadia Code', SFMono-Regular, Menlo, Consolas, monospace" font-size="11.5" font-weight="700" fill="#22201c">Rust</text>
+  <rect x="94.0" y="168.0" width="62.0" height="25.0" rx="7" fill="#22201c"/>
+  <rect x="92.0" y="166.0" width="62.0" height="25.0" rx="7" fill="#ffd3cf" stroke="#22201c" stroke-width="1.5"/>
+  <text x="123.0" y="182.5" text-anchor="middle" font-family="'DM Mono', ui-monospace, 'Cascadia Code', SFMono-Regular, Menlo, Consolas, monospace" font-size="11.5" font-weight="700" fill="#22201c">AI Bot</text>
+  <rect x="164.0" y="168.0" width="69.0" height="25.0" rx="7" fill="#22201c"/>
+  <rect x="162.0" y="166.0" width="69.0" height="25.0" rx="7" fill="#cfe6ff" stroke="#22201c" stroke-width="1.5"/>
+  <text x="196.5" y="182.5" text-anchor="middle" font-family="'DM Mono', ui-monospace, 'Cascadia Code', SFMono-Regular, Menlo, Consolas, monospace" font-size="11.5" font-weight="700" fill="#22201c">Systems</text>
+</svg>

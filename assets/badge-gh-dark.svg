@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="234" height="44" viewBox="0 0 234 44" fill="none" role="img">
+  <title>GitHub @SuperHuyGaming</title>
+  <defs>
+  </defs>
+  <rect x="5.5" y="5.5" width="227.0" height="37.0" rx="10" fill="#0b0d1a"/>
+  <rect x="2.0" y="2.0" width="227.0" height="37.0" rx="10" fill="#564396" stroke="#0b0d1a" stroke-width="1.8"/>
+  <g transform="translate(14.0,11.0) scale(0.750)">
+    <path d="M12 2.5a9.5 9.5 0 0 0-3 18.5c.48.09.65-.2.65-.45v-1.7c-2.65.58-3.2-1.12-3.2-1.12-.43-1.1-1.06-1.4-1.06-1.4-.86-.59.07-.58.07-.58.95.07 1.46.98 1.46.98.85 1.45 2.22 1.03 2.76.79.09-.62.33-1.03.6-1.27-2.11-.24-4.34-1.06-4.34-4.7 0-1.04.37-1.89.98-2.55-.1-.24-.43-1.22.09-2.54 0 0 .8-.26 2.62.97a9.1 9.1 0 0 1 4.76 0c1.82-1.23 2.62-.97 2.62-.97.52 1.32.19 2.3.1 2.54.61.66.98 1.51.98 2.55 0 3.65-2.23 4.46-4.35 4.7.34.3.65.88.65 1.78v2.64c0 .25.17.55.66.45A9.5 9.5 0 0 0 12 2.5z" fill="#f3f1ff"/>
+  </g>
+  <text x="39" y="25.5" font-family="'Fredoka', 'Segoe UI', ui-rounded, -apple-system, BlinkMacSystemFont, sans-serif" font-size="14" font-weight="700" fill="#f3f1ff">GitHub</text>
+  <text x="92.5" y="25" font-family="'DM Mono', ui-monospace, 'Cascadia Code', SFMono-Regular, Menlo, Consolas, monospace" font-size="12.5" font-weight="500" fill="#b8b6d4">@SuperHuyGaming</text>
+</svg>

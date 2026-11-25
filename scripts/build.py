@@ -29,15 +29,15 @@ def _picture(stem: str, alt: str, width: str = "100%", has_phone: bool = True, h
     size_attr = f'height="{height}"' if height else f'width="{width}"'
     sources = []
     if has_phone:
-        sources.append(f'<source media="(prefers-color-scheme: dark) and (max-width: 600px)" srcset="assets/{stem}-phone-dark.svg">')
-        sources.append(f'<source media="(max-width: 600px)" srcset="assets/{stem}-phone-light.svg">')
-    sources.append(f'<source media="(prefers-color-scheme: dark)" srcset="assets/{stem}-dark.svg">')
-    img = f'<img src="assets/{stem}-light.svg" {size_attr} alt="{esc(alt)}">'
+        sources.append(f'<source media="(prefers-color-scheme: dark) and (max-width: 600px)" srcset="assets/bt-{stem}-phone-dark.svg">')
+        sources.append(f'<source media="(max-width: 600px)" srcset="assets/bt-{stem}-phone-light.svg">')
+    sources.append(f'<source media="(prefers-color-scheme: dark)" srcset="assets/bt-{stem}-dark.svg">')
+    img = f'<img src="assets/bt-{stem}-light.svg" {size_attr} alt="{esc(alt)}">'
     return "<picture>" + "".join(sources) + img + "</picture>"
 
 
 def _write_svg(name: str, content: str) -> None:
-    (ASSETS / name).write_text(content, encoding="utf-8")
+    (ASSETS / f"bt-{name}").write_text(content, encoding="utf-8")
 
 
 def build() -> None:

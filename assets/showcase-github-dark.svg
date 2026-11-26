@@ -1,0 +1,114 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="216" viewBox="0 0 880 216" fill="none" role="img">
+  <title>GitHub Activity Stats</title>
+  <defs>
+    <pattern id="stats-dots-dark-d" width="28" height="28" patternUnits="userSpaceOnUse">
+      <circle cx="14.0" cy="14.0" r="1.1" fill="#2E3F35" fill-opacity="0.35"/>
+    </pattern>
+    <radialGradient id="stats-glow-dark-d" cx="50%" cy="15%" r="70%">
+      <stop offset="0%" stop-color="#4CC38A" stop-opacity="0.1"/>
+      <stop offset="100%" stop-color="#4CC38A" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect x="5.0" y="5.0" width="874.0" height="210.0" rx="16" fill="#06120D" fill-opacity="0.95"/>
+  <rect x="1" y="1" width="874.0" height="210.0" rx="16" fill="#0E1512" stroke="#25312A" stroke-width="1.5"/>
+  <rect x="1.5" y="1.5" width="873.0" height="209.0" rx="16" fill="url(#stats-dots-dark-d)"/>
+  <rect x="1.5" y="1.5" width="873.0" height="209.0" rx="16" fill="url(#stats-glow-dark-d)"/>
+  <rect x="23.0" y="21.5" width="195.5" height="118" rx="12" fill="#06120D" fill-opacity="0.90"/>
+  <rect x="20.0" y="18" width="195.5" height="118" rx="12" fill="#13291F" stroke="#4CC38A" stroke-width="1.5"/>
+  <rect x="34.0" y="132.0" width="38" height="3" rx="1.5" fill="#4CC38A"/>
+  <g transform="translate(166.5,30.0) scale(0.8636)">
+    <rect x="4" y="8" width="34" height="31" rx="7" fill="#E8EEEA" stroke="#E8EEEA" stroke-width="3.6"/>
+    <rect x="6" y="10" width="34" height="31" rx="7" fill="#06120D" fill-opacity="0.95"/>
+    <rect x="4" y="8" width="34" height="31" rx="7" fill="#E8EEEA" stroke="#06120D" stroke-width="2.2"/>
+    <path d="M4 15c0-3.9 3.1-7 7-7h20c3.9 0 7 3.1 7 7v2H4v-2z" fill="#4CC38A" stroke="#06120D" stroke-width="2.2"/>
+    <rect x="11" y="4" width="4.5" height="7" rx="2.2" fill="#F0D58C" stroke="#06120D" stroke-width="1.8"/>
+    <rect x="26.5" y="4" width="4.5" height="7" rx="2.2" fill="#F0D58C" stroke="#06120D" stroke-width="1.8"/>
+    <rect x="9.5" y="21" width="6.5" height="6.5" rx="1.8" fill="#4CC38A" stroke="#06120D" stroke-width="1.4"/>
+    <rect x="18.8" y="21" width="6.5" height="6.5" rx="1.8" fill="#4CC38A" stroke="#06120D" stroke-width="1.4"/>
+    <rect x="28" y="21" width="5.5" height="6.5" rx="1.8" fill="#F0D58C" stroke="#06120D" stroke-width="1.4"/>
+    <rect x="9.5" y="29.5" width="6.5" height="5.5" rx="1.8" fill="#4CC38A" stroke="#06120D" stroke-width="1.4"/>
+    <rect x="18.8" y="29.5" width="6.5" height="5.5" rx="1.8" fill="#F0D58C" stroke="#06120D" stroke-width="1.4"/>
+    <polygon points="37.0,3.8 38.3,6.7 41.2,8.0 38.3,9.3 37.0,12.2 35.7,9.3 32.8,8.0 35.7,6.7" fill="#F0D58C" stroke="#06120D" stroke-width="1.2" stroke-linejoin="round"/>
+  </g>
+  <text x="34.0" y="45" font-family="'JetBrains Mono', Consolas, ui-monospace, SFMono-Regular, Menlo, monospace" font-size="10" font-weight="700" letter-spacing="0.6" fill="#4CC38A">LAST 12 MONTHS</text>
+  <text x="34.0" y="92" font-family="'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif" font-size="30" font-weight="800" letter-spacing="-0.8" fill="#E8EEEA">776</text>
+  <text x="34.0" y="118" font-family="'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif" font-size="12.5" font-weight="500" fill="#A2B1A8">total contributions</text>
+  <rect x="235.5" y="21.5" width="195.5" height="118" rx="12" fill="#06120D" fill-opacity="0.90"/>
+  <rect x="232.5" y="18" width="195.5" height="118" rx="12" fill="#141D18" stroke="#4CC38A" stroke-width="1.5"/>
+  <rect x="246.5" y="132.0" width="38" height="3" rx="1.5" fill="#4CC38A"/>
+  <g transform="translate(379.0,30.0) scale(0.8636)">
+    <path d="M23 3c4 8 13 12 13 22 0 8.5-6.2 14.5-14 14.5S8 33.5 8 25c0-5 2.5-9.5 6-13 .5 3.2 2.2 5 4 5.5C17 11 19 6 23 3z" fill="#E8EEEA" stroke="#E8EEEA" stroke-width="4.2" stroke-linejoin="round"/>
+    <path d="M23 3c4 8 13 12 13 22 0 8.5-6.2 14.5-14 14.5S8 33.5 8 25c0-5 2.5-9.5 6-13 .5 3.2 2.2 5 4 5.5C17 11 19 6 23 3z" fill="#F0D58C" stroke="#06120D" stroke-width="2.3" stroke-linejoin="round"/>
+    <path d="M22.5 14.5c3.5 4.8 7.5 8 7.5 13.5 0 4.8-3.6 8.5-8 8.5s-8-3.7-8-8.5c0-3 1.4-5.5 3.4-7.5.5 2 1.8 3 3 3.2-.2-3.5.6-6.5 2.1-9.2z" fill="#4CC38A" stroke="#06120D" stroke-width="1.9" stroke-linejoin="round"/>
+    <ellipse cx="22" cy="30" rx="3.4" ry="4.4" fill="#E8EEEA"/>
+    <circle cx="9" cy="11" r="2.3" fill="#F0D58C" stroke="#06120D" stroke-width="1.3"/>
+    <circle cx="37" cy="13" r="1.9" fill="#4CC38A" stroke="#06120D" stroke-width="1.3"/>
+  </g>
+  <text x="246.5" y="45" font-family="'JetBrains Mono', Consolas, ui-monospace, SFMono-Regular, Menlo, monospace" font-size="10" font-weight="700" letter-spacing="0.6" fill="#4CC38A">CURRENT STREAK</text>
+  <text x="246.5" y="92" font-family="'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif" font-size="30" font-weight="800" letter-spacing="-0.8" fill="#E8EEEA">2 days</text>
+  <text x="246.5" y="118" font-family="'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif" font-size="12.5" font-weight="500" fill="#A2B1A8">since 23 Nov</text>
+  <rect x="448.0" y="21.5" width="195.5" height="118" rx="12" fill="#06120D" fill-opacity="0.90"/>
+  <rect x="445.0" y="18" width="195.5" height="118" rx="12" fill="#242014" stroke="#D9B45A" stroke-width="1.5"/>
+  <rect x="459.0" y="132.0" width="38" height="3" rx="1.5" fill="#D9B45A"/>
+  <g transform="translate(591.5,30.0) scale(0.8636)">
+    <path d="M11 7h22v11c0 6.5-4.8 11.5-11 11.5S11 24.5 11 18V7z" fill="#E8EEEA" stroke="#E8EEEA" stroke-width="4.5" stroke-linejoin="round"/>
+    <path d="M11 10H6.5c-2 0-3 1.5-3 3.5 0 3.2 2.5 5.8 7.5 6" fill="none" stroke="#06120D" stroke-width="4.2" stroke-linecap="round"/>
+    <path d="M11 10H6.5c-2 0-3 1.5-3 3.5 0 3.2 2.5 5.8 7.5 6" fill="none" stroke="#F0D58C" stroke-width="2.2" stroke-linecap="round"/>
+    <path d="M33 10h4.5c2 0 3 1.5 3 3.5 0 3.2-2.5 5.8-7.5 6" fill="none" stroke="#06120D" stroke-width="4.2" stroke-linecap="round"/>
+    <path d="M33 10h4.5c2 0 3 1.5 3 3.5 0 3.2-2.5 5.8-7.5 6" fill="none" stroke="#F0D58C" stroke-width="2.2" stroke-linecap="round"/>
+    <rect x="19" y="28" width="6" height="6" fill="#D9B45A" stroke="#06120D" stroke-width="2"/>
+    <rect x="13" y="34" width="18" height="5.5" rx="2.5" fill="#2E9E6A" stroke="#06120D" stroke-width="2.1"/>
+    <path d="M11 7h22v11c0 6.5-4.8 11.5-11 11.5S11 24.5 11 18V7z" fill="#F0D58C" stroke="#06120D" stroke-width="2.3" stroke-linejoin="round"/>
+    <polygon points="22,11.5 26.5,16 22,20.5 17.5,16" fill="#4CC38A" stroke="#06120D" stroke-width="1.6" stroke-linejoin="round"/>
+    <path d="M14.5 10.5v5.5" stroke="#E8EEEA" stroke-width="1.8" stroke-linecap="round"/>
+    <polygon points="36.0,2.4 37.2,4.8 39.6,6.0 37.2,7.2 36.0,9.6 34.8,7.2 32.4,6.0 34.8,4.8" fill="#F0D58C" stroke="#06120D" stroke-width="1.2" stroke-linejoin="round"/>
+  </g>
+  <text x="459.0" y="45" font-family="'JetBrains Mono', Consolas, ui-monospace, SFMono-Regular, Menlo, monospace" font-size="10" font-weight="700" letter-spacing="0.6" fill="#D9B45A">LONGEST STREAK</text>
+  <text x="459.0" y="92" font-family="'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif" font-size="30" font-weight="800" letter-spacing="-0.8" fill="#E8EEEA">11 days</text>
+  <text x="459.0" y="118" font-family="'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif" font-size="12.5" font-weight="500" fill="#A2B1A8">personal best</text>
+  <rect x="660.5" y="21.5" width="195.5" height="118" rx="12" fill="#06120D" fill-opacity="0.90"/>
+  <rect x="657.5" y="18" width="195.5" height="118" rx="12" fill="#141D18" stroke="#D9B45A" stroke-width="1.5"/>
+  <rect x="671.5" y="132.0" width="38" height="3" rx="1.5" fill="#D9B45A"/>
+  <g transform="translate(804.0,30.0) scale(0.8636)">
+    <rect x="5" y="24" width="8.5" height="15" rx="2.5" fill="#E8EEEA" stroke="#E8EEEA" stroke-width="3.2"/>
+    <rect x="17" y="17" width="8.5" height="22" rx="2.5" fill="#E8EEEA" stroke="#E8EEEA" stroke-width="3.2"/>
+    <rect x="29" y="10" width="8.5" height="29" rx="2.5" fill="#E8EEEA" stroke="#E8EEEA" stroke-width="3.2"/>
+    <rect x="5" y="24" width="8.5" height="15" rx="2.5" fill="#256F4B" stroke="#06120D" stroke-width="2.1"/>
+    <rect x="17" y="17" width="8.5" height="22" rx="2.5" fill="#4CC38A" stroke="#06120D" stroke-width="2.1"/>
+    <rect x="29" y="10" width="8.5" height="29" rx="2.5" fill="#F0D58C" stroke="#06120D" stroke-width="2.1"/>
+    <path d="M7 18L20 9l11-4" fill="none" stroke="#06120D" stroke-width="3.8" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M7 18L20 9l11-4" fill="none" stroke="#F0D58C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <polygon points="35.0,1.4 36.5,4.5 39.6,6.0 36.5,7.5 35.0,10.6 33.5,7.5 30.4,6.0 33.5,4.5" fill="#F0D58C" stroke="#06120D" stroke-width="1.2" stroke-linejoin="round"/>
+  </g>
+  <text x="671.5" y="45" font-family="'JetBrains Mono', Consolas, ui-monospace, SFMono-Regular, Menlo, monospace" font-size="10" font-weight="700" letter-spacing="0.6" fill="#D9B45A">SINCE 2022</text>
+  <text x="671.5" y="92" font-family="'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif" font-size="30" font-weight="800" letter-spacing="-0.8" fill="#E8EEEA">916</text>
+  <text x="671.5" y="118" font-family="'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif" font-size="12.5" font-weight="500" fill="#A2B1A8">all-time contributions</text>
+  <rect x="104.8" y="160.0" width="146" height="30" rx="9" fill="#06120D" fill-opacity="0.85"/>
+  <rect x="103.0" y="158.0" width="146" height="30" rx="9" fill="#13291F" stroke="#4CC38A" stroke-width="1.3"/>
+  <g transform="translate(113.0,165.5) scale(0.9375)">
+    <path d="M1.5 4.2c0-1 .8-1.7 1.8-1.7h3.2l1.4 1.5h4.8c1 0 1.8.8 1.8 1.8v6.4c0 1-.8 1.8-1.8 1.8H3.3c-1 0-1.8-.8-1.8-1.8V4.2z" fill="#4CC38A" stroke="#06120D" stroke-width="1.4" stroke-linejoin="round"/>
+    <rect x="3.5" y="6.2" width="9" height="5.5" rx="1" fill="#F0D58C" stroke="#06120D" stroke-width="1.1"/>
+  </g>
+  <text x="135.0" y="177.0" text-anchor="start" font-family="'JetBrains Mono', Consolas, ui-monospace, SFMono-Regular, Menlo, monospace" font-size="11.5" font-weight="600" fill="#4CC38A">24 public repos</text>
+  <rect x="262.8" y="160.0" width="140" height="30" rx="9" fill="#06120D" fill-opacity="0.85"/>
+  <rect x="261.0" y="158.0" width="140" height="30" rx="9" fill="#242014" stroke="#D9B45A" stroke-width="1.3"/>
+  <g transform="translate(271.0,165.5) scale(0.9375)">
+    <polygon points="8,1.3 10.1,5.5 14.7,6.1 11.3,9.3 12.2,13.9 8,11.7 3.8,13.9 4.7,9.3 1.3,6.1 5.9,5.5" fill="#F0D58C" stroke="#06120D" stroke-width="1.4" stroke-linejoin="round"/>
+    <circle cx="6.7" cy="6.4" r="0.9" fill="#E8EEEA"/>
+  </g>
+  <text x="293.0" y="177.0" text-anchor="start" font-family="'JetBrains Mono', Consolas, ui-monospace, SFMono-Regular, Menlo, monospace" font-size="11.5" font-weight="600" fill="#D9B45A">6 stars earned</text>
+  <rect x="414.8" y="160.0" width="174" height="30" rx="9" fill="#06120D" fill-opacity="0.85"/>
+  <rect x="413.0" y="158.0" width="174" height="30" rx="9" fill="#13291F" stroke="#4CC38A" stroke-width="1.3"/>
+  <g transform="translate(423.0,165.5) scale(0.9375)">
+    <polygon points="9.2,1.2 3.2,8.8 7.5,8.8 6.4,14.8 12.8,6.8 8.3,6.8" fill="#F0D58C" stroke="#06120D" stroke-width="1.4" stroke-linejoin="round"/>
+  </g>
+  <text x="445.0" y="177.0" text-anchor="start" font-family="'JetBrains Mono', Consolas, ui-monospace, SFMono-Regular, Menlo, monospace" font-size="11.5" font-weight="600" fill="#4CC38A">56 active days (1y)</text>
+  <rect x="600.8" y="160.0" width="174" height="30" rx="9" fill="#06120D" fill-opacity="0.85"/>
+  <rect x="599.0" y="158.0" width="174" height="30" rx="9" fill="#141D18" stroke="#25312A" stroke-width="1.3"/>
+  <g transform="translate(609.0,165.5) scale(0.9375)">
+    <circle cx="8" cy="8" r="6.2" fill="#13291F" stroke="#06120D" stroke-width="1.4"/>
+    <circle cx="8" cy="8" r="4.4" fill="#F0D58C" stroke="#06120D" stroke-width="1.1"/>
+    <path d="M8 5v3.2l2.2 1.4" stroke="#06120D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <text x="631.0" y="177.0" text-anchor="start" font-family="'JetBrains Mono', Consolas, ui-monospace, SFMono-Regular, Menlo, monospace" font-size="11.5" font-weight="600" fill="#A2B1A8">updated 25 Nov 2026</text>
+</svg>

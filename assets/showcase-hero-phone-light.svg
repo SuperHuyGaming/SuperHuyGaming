@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="440" height="344" viewBox="0 0 440 344" fill="none" role="img">
+  <title>Huy Truong — Software Engineer</title>
+  <defs>
+    <pattern id="hero-dots-light-p" width="24" height="24" patternUnits="userSpaceOnUse">
+      <circle cx="12.0" cy="12.0" r="1.2" fill="#B8C4BC" fill-opacity="0.4"/>
+    </pattern>
+    <radialGradient id="hero-glow-em-light-p" cx="82%" cy="26%" r="52%">
+      <stop offset="0%" stop-color="#0B5D3B" stop-opacity="0.1"/>
+      <stop offset="100%" stop-color="#0B5D3B" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="hero-glow-gd-light-p" cx="70%" cy="82%" r="44%">
+      <stop offset="0%" stop-color="#B08A2E" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#B08A2E" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="hero-gold-light-p" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#D9B45A"/>
+      <stop offset="100%" stop-color="#8A6A1E"/>
+    </linearGradient>
+  </defs>
+  <rect x="5.0" y="5.0" width="434.0" height="338.0" rx="16" fill="#08472D" fill-opacity="0.22"/>
+  <rect x="1" y="1" width="434.0" height="338.0" rx="16" fill="#FAFAF7" stroke="#E3E6E1" stroke-width="1.5"/>
+  <rect x="1.5" y="1.5" width="433.0" height="337.0" rx="16" fill="url(#hero-dots-light-p)"/>
+  <rect x="1.5" y="1.5" width="433.0" height="337.0" rx="16" fill="url(#hero-glow-em-light-p)"/>
+  <rect x="1.5" y="1.5" width="433.0" height="337.0" rx="16" fill="url(#hero-glow-gd-light-p)"/>
+  <rect x="1.5" y="20" width="4" height="268" rx="2" fill="#0B5D3B"/>
+  <rect x="1.5" y="294" width="4" height="24" rx="2" fill="url(#hero-gold-light-p)"/>
+  <g transform="translate(326,22) scale(0.68)">
+    <line x1="68" y1="6" x2="68" y2="24" stroke="#06120D" stroke-width="4" stroke-linecap="round"/>
+    <circle cx="68" cy="7" r="6.5" fill="#D9B45A" stroke="#06120D" stroke-width="2.6"/>
+    <rect x="14" y="22" width="108" height="84" rx="20" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="5.5"/>
+    <rect x="18" y="26" width="108" height="84" rx="20" fill="#08472D" fill-opacity="0.22"/>
+    <rect x="14" y="22" width="108" height="84" rx="20" fill="#0B5D3B" stroke="#06120D" stroke-width="3"/>
+    <rect x="24" y="33" width="88" height="54" rx="12" fill="#06120D" stroke="#D9B45A" stroke-width="2.4"/>
+    <path d="M44 56c2.5-5 8.5-5 11 0M79 56c2.5-5 8.5-5 11 0" fill="none" stroke="#C4E8D4" stroke-width="3.6" stroke-linecap="round"/>
+    <path d="M58 66c5 5.5 13 5.5 18 0" fill="none" stroke="#D9B45A" stroke-width="3" stroke-linecap="round"/>
+    <rect x="26" y="106" width="84" height="12" rx="6" fill="#D9B45A" stroke="#06120D" stroke-width="2.6"/>
+    <rect x="4" y="48" width="10" height="26" rx="5" fill="#D9B45A" stroke="#06120D" stroke-width="2.4"/>
+    <rect x="122" y="48" width="10" height="26" rx="5" fill="#D9B45A" stroke="#06120D" stroke-width="2.4"/>
+  </g>
+  <g transform="translate(314,18)">
+    <polygon points="6.0,1.8 7.3,4.7 10.2,6.0 7.3,7.3 6.0,10.2 4.7,7.3 1.8,6.0 4.7,4.7" fill="#D9B45A" stroke="#06120D" stroke-width="1.2" stroke-linejoin="round"/>
+  </g>
+  <g transform="translate(346,264) scale(0.95)">
+    <polygon points="34,6 60,19 60,49 34,62 8,49 8,19" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="4.5" stroke-linejoin="round"/>
+    <polygon points="34,6 60,19 34,32 8,19" fill="#D9B45A" stroke="#06120D" stroke-width="2.3" stroke-linejoin="round"/>
+    <polygon points="8,19 34,32 34,62 8,49" fill="#0B5D3B" stroke="#06120D" stroke-width="2.3" stroke-linejoin="round"/>
+    <polygon points="60,19 34,32 34,62 60,49" fill="#08472D" stroke="#06120D" stroke-width="2.3" stroke-linejoin="round"/>
+    <circle cx="34" cy="19" r="3.2" fill="#FFFFFF" stroke="#06120D" stroke-width="1.3"/>
+    <circle cx="20" cy="40" r="3.2" fill="#D9B45A" stroke="#06120D" stroke-width="1.3"/>
+    <circle cx="48" cy="40" r="3.2" fill="#C4E8D4" stroke="#06120D" stroke-width="1.3"/>
+  </g>
+  <rect x="23.5" y="21.5" width="116" height="22" rx="11" fill="#08472D" fill-opacity="0.14"/>
+  <rect x="22" y="20" width="116" height="22" rx="11" fill="#EBF4EF" stroke="#B08A2E" stroke-width="1.2"/>
+  <circle cx="33" cy="31" r="3.5" fill="#0B5D3B"/>
+  <text x="42" y="34.5" font-family="'JetBrains Mono', Consolas, ui-monospace, SFMono-Regular, Menlo, monospace" font-size="10.5" font-weight="700" letter-spacing="0.8" fill="#B08A2E">BENTRUONG.DEV</text>
+  <text x="22" y="81" font-family="'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif" font-size="34" font-weight="800" letter-spacing="-1.0" fill="#16211B">Huy Truong</text>
+  <path d="M24 95 Q105 90 198 95" fill="none" stroke="url(#hero-gold-light-p)" stroke-width="3.6" stroke-linecap="round"/>
+  <text x="22" y="119" font-family="'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif" font-size="17" font-weight="700" fill="#0B5D3B">Software Engineer</text>
+  <text x="22" y="146" font-family="'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif" font-size="13.5" fill="#55625A">CS at George Mason. Starting my M.S. in</text>
+  <text x="22" y="167" font-family="'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif" font-size="13.5" fill="#55625A">machine learning in January 2027.</text>
+  <rect x="23.8" y="200.0" width="129" height="28" rx="8" fill="#08472D" fill-opacity="0.18"/>
+  <rect x="22.0" y="198.0" width="129" height="28" rx="8" fill="#EBF4EF" stroke="#0B5D3B" stroke-width="1.3"/>
+  <g transform="translate(31.0,204.5) scale(0.9375)">
+    <rect x="1.5" y="2.5" width="13" height="11" rx="2.5" fill="#FAFAF7" stroke="#06120D" stroke-width="1.5"/>
+    <path d="M1.5 5.5h13" stroke="#06120D" stroke-width="1.4"/>
+    <rect x="2.2" y="3.2" width="11.6" height="2" rx="1" fill="#0B5D3B"/>
+    <circle cx="4" cy="4.2" r="0.8" fill="#D9B45A"/>
+    <path d="M5.5 8L3.8 9.6 5.5 11.2M10.5 8l1.7 1.6-1.7 1.6M8.7 7.5l-1.4 4.2" stroke="#08472D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <text x="53.0" y="216.0" text-anchor="start" font-family="'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif" font-size="11.5" font-weight="600" fill="#0B5D3B">Full-Stack Apps</text>
+  <rect x="160.8" y="200.0" width="93" height="28" rx="8" fill="#08472D" fill-opacity="0.18"/>
+  <rect x="159.0" y="198.0" width="93" height="28" rx="8" fill="#FFFFFF" stroke="#E3E6E1" stroke-width="1.3"/>
+  <g transform="translate(168.0,204.5) scale(0.9375)">
+    <line x1="8" y1="1.5" x2="8" y2="4" stroke="#06120D" stroke-width="1.6" stroke-linecap="round"/>
+    <circle cx="8" cy="1.8" r="1.4" fill="#D9B45A" stroke="#06120D" stroke-width="1.2"/>
+    <rect x="2" y="4" width="12" height="10" rx="3.2" fill="#0B5D3B" stroke="#06120D" stroke-width="1.3"/>
+    <rect x="3.8" y="6" width="8.4" height="5" rx="1.8" fill="#06120D"/>
+    <circle cx="6.2" cy="8.5" r="1.1" fill="#D9B45A"/>
+    <circle cx="9.8" cy="8.5" r="1.1" fill="#D9B45A"/>
+    <path d="M6.4 12.2h3.2" stroke="#D9B45A" stroke-width="1.3" stroke-linecap="round"/>
+  </g>
+  <text x="190.0" y="216.0" text-anchor="start" font-family="'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif" font-size="11.5" font-weight="600" fill="#16211B">AI Agents</text>
+  <rect x="23.8" y="236.0" width="138" height="28" rx="8" fill="#08472D" fill-opacity="0.18"/>
+  <rect x="22.0" y="234.0" width="138" height="28" rx="8" fill="#F7F2E4" stroke="#B08A2E" stroke-width="1.3"/>
+  <g transform="translate(31.0,240.5) scale(0.9375)">
+    <line x1="4" y1="5" x2="12" y2="4" stroke="#06120D" stroke-width="1.6"/>
+    <line x1="4" y1="5" x2="9" y2="12" stroke="#06120D" stroke-width="1.6"/>
+    <line x1="12" y1="4" x2="9" y2="12" stroke="#06120D" stroke-width="1.6"/>
+    <circle cx="4" cy="5" r="2.6" fill="#0B5D3B" stroke="#06120D" stroke-width="1.3"/>
+    <circle cx="12" cy="4" r="2.4" fill="#D9B45A" stroke="#06120D" stroke-width="1.3"/>
+    <circle cx="9" cy="12" r="2.5" fill="#7CC9A1" stroke="#06120D" stroke-width="1.3"/>
+  </g>
+  <text x="53.0" y="252.0" text-anchor="start" font-family="'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif" font-size="11.5" font-weight="600" fill="#B08A2E">Machine Learning</text>
+  <rect x="169.8" y="236.0" width="120" height="28" rx="8" fill="#08472D" fill-opacity="0.18"/>
+  <rect x="168.0" y="234.0" width="120" height="28" rx="8" fill="#FFFFFF" stroke="#E3E6E1" stroke-width="1.3"/>
+  <g transform="translate(177.0,240.5) scale(0.9375)">
+    <polygon points="8,9 14,11.5 8,14 2,11.5" fill="#08472D" stroke="#06120D" stroke-width="1.1" stroke-linejoin="round"/>
+    <polygon points="8,5.8 14,8.3 8,10.8 2,8.3" fill="#0B5D3B" stroke="#06120D" stroke-width="1.1" stroke-linejoin="round"/>
+    <polygon points="8,2.5 14,5 8,7.5 2,5" fill="#D9B45A" stroke="#06120D" stroke-width="1.1" stroke-linejoin="round"/>
+  </g>
+  <text x="199.0" y="252.0" text-anchor="start" font-family="'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif" font-size="11.5" font-weight="600" fill="#16211B">Deep Learning</text>
+  <rect x="24.2" y="288.2" width="140" height="28" rx="14" fill="#08472D" fill-opacity="0.18"/>
+  <rect x="22.0" y="286.0" width="140" height="28" rx="14" fill="#FFFFFF" stroke="#0B5D3B" stroke-width="1.5"/>
+  <circle cx="35.0" cy="300.0" r="3.2" fill="#D9B45A" stroke="#06120D" stroke-width="1"/>
+  <text x="44.0" y="304.0" font-family="'JetBrains Mono', Consolas, ui-monospace, SFMono-Regular, Menlo, monospace" font-size="11.5" font-weight="700" fill="#16211B">bentruong.dev &#x2197;</text>
+</svg>

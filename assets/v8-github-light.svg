@@ -25,10 +25,10 @@
   <text x="249.5" y="111" font-family="'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif" font-size="12.5" fill="#4F6358">shipped in last year</text>
   <rect x="447.0" y="18" width="199.5" height="114" rx="10" fill="#FFFFFF" stroke="#D3E1D9" stroke-width="1"/>
   <g transform="translate(600.5,32.0) scale(0.889)">
-    <path d="M10 6h16v9a8 8 0 0 1-16 0V6z" fill="#B08A2E" stroke="#06120D" stroke-width="2.4" stroke-linejoin="round"/>
-    <path d="M10 9H5.5v3a4.5 4.5 0 0 0 4.5 4.5M26 9h4.5v3a4.5 4.5 0 0 1-4.5 4.5" fill="none" stroke="#06120D" stroke-width="2.4" stroke-linecap="round"/>
-    <rect x="15.5" y="23" width="5" height="5" fill="#B08A2E" stroke="#06120D" stroke-width="2.2"/>
-    <rect x="11" y="27.5" width="14" height="4.5" rx="2" fill="#FAFAF7" stroke="#06120D" stroke-width="2.2"/>
+    <path d="M10 9H5.5v3a4.5 4.5 0 0 0 4.5 4.5M26 9h4.5v3a4.5 4.5 0 0 1-4.5 4.5" fill="none" stroke="#B08A2E" stroke-width="2.6" stroke-linecap="round"/>
+    <path d="M10 6h16v9a8 8 0 0 1-16 0V6z" fill="#B08A2E" stroke="#06120D" stroke-width="2.2" stroke-linejoin="round"/>
+    <rect x="15.5" y="23" width="5" height="5" fill="#B08A2E" stroke="#06120D" stroke-width="2"/>
+    <rect x="11" y="27.5" width="14" height="4.5" rx="2" fill="#FAFAF7" stroke="#06120D" stroke-width="2"/>
   </g>
   <text x="463.0" y="45" font-family="'JetBrains Mono', Consolas, ui-monospace, SFMono-Regular, Menlo, monospace" font-size="10.5" font-weight="600" letter-spacing="0.8" fill="#4F6358">LONGEST STREAK</text>
   <text x="463.0" y="87" font-family="'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif" font-size="31" font-weight="800" letter-spacing="-0.8" fill="#13221B">11 days</text>

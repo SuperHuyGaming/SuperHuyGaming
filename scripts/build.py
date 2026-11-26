@@ -23,7 +23,7 @@ ASSETS = ROOT / "assets"
 PROFILE_PATH = ROOT / "profile.json"
 TOKENS_PATH = ROOT / "scripts" / "tokens.json"
 README_PATH = ROOT / "README.md"
-ASSET_PREFIX = "v7-"
+ASSET_PREFIX = "v8-"
 
 
 def _picture(stem: str, alt: str, width: str = "100%", has_phone: bool = True, height: str | None = None) -> str:

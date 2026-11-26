@@ -201,8 +201,20 @@ def render_section_header(index: str, title: str, right_note: str, t: dict[str, 
 
 def render_github_stats(state: dict[str, Any], t: dict[str, str], theme: str, phone: bool = False) -> str:
     cur_streak = state["current_streak"]
-    cur_label = f"{cur_streak} day" if cur_streak == 1 else f"{cur_streak} days"
-    cur_sub = _fmt_short_date(state["current_streak_start"]) if cur_streak > 0 else "starting today"
+    if cur_streak >= 2:
+        slot2 = {
+            "eyebrow": "CURRENT STREAK",
+            "value": f"{cur_streak} days",
+            "sub": _fmt_short_date(state["current_streak_start"]),
+            "icon": "flame",
+        }
+    else:
+        slot2 = {
+            "eyebrow": "ACTIVE DAYS (1Y)",
+            "value": f"{state['active_days_year']} days",
+            "sub": "shipped in last year",
+            "icon": "bolt",
+        }
 
     long_streak = state["longest_streak"]
     long_label = f"{long_streak} day" if long_streak == 1 else f"{long_streak} days"
@@ -214,12 +226,7 @@ def render_github_stats(state: dict[str, Any], t: dict[str, str], theme: str, ph
             "sub": "total contributions",
             "icon": "calendar",
         },
-        {
-            "eyebrow": "CURRENT STREAK",
-            "value": cur_label,
-            "sub": cur_sub,
-            "icon": "flame",
-        },
+        slot2,
         {
             "eyebrow": "LONGEST STREAK",
             "value": long_label,
@@ -460,92 +467,42 @@ def render_project_card(
     theme: str,
     phone: bool = False,
 ) -> str:
+    """Uniform, balanced 2x2 project cards with anchored flat-shaded cartoon illustration tile."""
     pid = proj["id"]
-    has_screenshot = pid in ("badminton", "syllabus")
     overline = proj["overline"]
     if stars > 0:
         overline = f"{overline} · ★ {stars}"
 
-    if has_screenshot:
-        # Real app screenshot inside a clean bentruong.dev BrowserFrame!
-        W, H = 432, 368
-        img_uri = load_data_uri(f"{pid}.jpg")
-        host = proj["live"].replace("https://", "").rstrip("/")
-        clip_id = f"shot-{pid}-{theme}-{'p' if phone else 'd'}"
-        bx, by, bw, bh = 18, 18, W - 36, 186
-        defs = f'    <clipPath id="{clip_id}"><rect x="{bx}" y="{by + 24}" width="{bw}" height="{bh - 24}" rx="0"/></clipPath>\n'
-
-        body = surface_frame(W, H, t, radius=12, fill_key="paper")
-        # Browser chrome bar
-        body += (
-            f'  <rect x="{bx}" y="{by}" width="{bw}" height="{bh}" rx="8" '
-            f'fill="{t["bg"]}" stroke="{t["divider"]}" stroke-width="1"/>\n'
-        )
-        body += f'  <line x1="{bx}" y1="{by + 24}" x2="{bx + bw}" y2="{by + 24}" stroke="{t["divider"]}" stroke-width="1"/>\n'
-        for idx, dot_c in enumerate(("#FF5F57", "#FEBC2E", "#28C840")):
-            body += f'  <circle cx="{bx + 14 + idx * 12}" cy="{by + 12}" r="3.5" fill="{dot_c}" fill-opacity="0.85"/>\n'
-        body += (
-            f'  <text x="{bx + bw / 2:.1f}" y="{by + 15.5}" text-anchor="middle" font-family="{MONO_FONT}" '
-            f'font-size="10.5" fill="{t["muted"]}">{esc(host)}</text>\n'
-        )
-        body += (
-            f'  <image href="{img_uri}" x="{bx + 0.5}" y="{by + 24.5}" width="{bw - 1}" height="{bh - 25}" '
-            f'clip-path="url(#{clip_id})" preserveAspectRatio="xMidYMid slice"/>\n'
-        )
-
-        # Plain gold overline + arrow
-        ty = by + bh + 26
-        body += (
-            f'  <text x="20" y="{ty}" font-family="{MONO_FONT}" font-size="11" font-weight="700" '
-            f'letter-spacing="0.9" fill="{t["secondary"]}">{esc(overline)}</text>\n'
-        )
-        body += badge_cartoon_icon("arrow_ne", W - 36, ty - 13, 16, t)
-
-        # Title + description
-        body += (
-            f'  <text x="20" y="{ty + 28}" font-family="{SANS_FONT}" font-size="19.5" font-weight="700" '
-            f'letter-spacing="-0.3" fill="{t["text"]}">{esc(proj["name"])}</text>\n'
-        )
-        for idx, ln in enumerate(_wrap_text(proj["line"], 48)[:2]):
-            body += (
-                f'  <text x="20" y="{ty + 52 + idx * 19}" font-family="{SANS_FONT}" font-size="13.5" '
-                f'fill="{t["muted"]}">{esc(ln)}</text>\n'
-            )
-
-        # Clean neutral tech chips
-        px, py = 20, H - 44
-        for tech in proj["chips"]:
-            c_svg, cw = chip(px, py, tech, t, font_size=11.5, height=24, pad_x=9, mono=True)
-            if px + cw > W - 18:
-                break
-            body += c_svg
-            px += cw + 6
-
-        return svg_doc(W, H, defs, body, title=proj["name"])
-
-    # Bottom 2 cards: clean editorial layout + chunky flat-shaded cartoon illustration (no stickers/sparkles)
-    W, H = 432, 204
+    W, H = 432, 210
     body = surface_frame(W, H, t, radius=12, fill_key="paper")
 
+    # Plain gold overline + corner arrow
     body += (
         f'  <text x="22" y="34" font-family="{MONO_FONT}" font-size="11" font-weight="700" '
         f'letter-spacing="0.9" fill="{t["secondary"]}">{esc(overline)}</text>\n'
     )
     body += badge_cartoon_icon("arrow_ne", W - 36, 20, 16, t)
 
+    # Anchored illustration tile on right
+    tx, ty, ts = W - 118, 52, 96
     body += (
-        f'  <text x="22" y="64" font-family="{SANS_FONT}" font-size="19.5" font-weight="700" '
+        f'  <rect x="{tx}" y="{ty}" width="{ts}" height="{ts}" rx="12" '
+        f'fill="{t["bg"]}" stroke="{t["divider"]}" stroke-width="1"/>\n'
+    )
+    body += project_flat_illustration(pid, tx + 10, ty + 10, 76, t)
+
+    # Title + 3-line wrapped description on left (guaranteed clear of tile)
+    body += (
+        f'  <text x="22" y="64" font-family="{SANS_FONT}" font-size="19" font-weight="700" '
         f'letter-spacing="-0.3" fill="{t["text"]}">{esc(proj["name"])}</text>\n'
     )
-    for idx, ln in enumerate(_wrap_text(proj["line"], 34)[:3]):
+    for idx, ln in enumerate(_wrap_text(proj["line"], 35)[:3]):
         body += (
-            f'  <text x="22" y="{90 + idx * 19}" font-family="{SANS_FONT}" font-size="13.5" '
+            f'  <text x="22" y="{90 + idx * 19}" font-family="{SANS_FONT}" font-size="13" '
             f'fill="{t["muted"]}">{esc(ln)}</text>\n'
         )
 
-    # Large flat-shaded cartoon illustration on right
-    body += project_flat_illustration(pid, W - 108, 60, 84, t)
-
+    # Clean neutral tech chips along bottom
     px, py = 22, H - 44
     for tech in proj["chips"]:
         c_svg, cw = chip(px, py, tech, t, font_size=11.5, height=24, pad_x=9, mono=True)

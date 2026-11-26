@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="180" viewBox="0 0 880 180" fill="none" role="img">
+  <title>GitHub Activity Stats</title>
+  <rect x="0.75" y="0.75" width="878.5" height="178.5" rx="12" fill="#0E1512" stroke="#25312A" stroke-width="1"/>
+  <rect x="20.0" y="18" width="199.5" height="114" rx="10" fill="#141D18" stroke="#25312A" stroke-width="1"/>
+  <g transform="translate(173.5,32.0) scale(0.889)">
+    <rect x="4" y="7" width="28" height="24" rx="5" fill="#FAFAF7" stroke="#06120D" stroke-width="2.4"/>
+    <path d="M4 13h28V12a5 5 0 0 0-5-5H9a5 5 0 0 0-5 5v1z" fill="#4CC38A" stroke="#06120D" stroke-width="2.4"/>
+    <rect x="10" y="3" width="4" height="7" rx="2" fill="#D9B45A" stroke="#06120D" stroke-width="2"/>
+    <rect x="22" y="3" width="4" height="7" rx="2" fill="#D9B45A" stroke="#06120D" stroke-width="2"/>
+    <rect x="9" y="18" width="5" height="4" rx="1" fill="#4CC38A"/>
+    <rect x="16" y="18" width="5" height="4" rx="1" fill="#D9B45A"/>
+    <rect x="23" y="18" width="4" height="4" rx="1" fill="#4CC38A"/>
+    <rect x="9" y="24" width="5" height="3.5" rx="1" fill="#4CC38A"/>
+    <rect x="16" y="24" width="11" height="3.5" rx="1" fill="#06120D" fill-opacity="0.22"/>
+  </g>
+  <text x="36.0" y="45" font-family="'JetBrains Mono', Consolas, ui-monospace, SFMono-Regular, Menlo, monospace" font-size="10.5" font-weight="600" letter-spacing="0.8" fill="#A2B1A8">LAST 12 MONTHS</text>
+  <text x="36.0" y="87" font-family="'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif" font-size="31" font-weight="800" letter-spacing="-0.8" fill="#E8EEEA">776</text>
+  <text x="36.0" y="111" font-family="'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif" font-size="12.5" fill="#A2B1A8">total contributions</text>
+  <rect x="233.5" y="18" width="199.5" height="114" rx="10" fill="#141D18" stroke="#25312A" stroke-width="1"/>
+  <g transform="translate(387.0,32.0) scale(0.889)">
+    <path d="M20 4L8 20h9l-1.5 12L28 16h-9L20 4z" fill="#D9B45A" stroke="#06120D" stroke-width="2.4" stroke-linejoin="round"/>
+  </g>
+  <text x="249.5" y="45" font-family="'JetBrains Mono', Consolas, ui-monospace, SFMono-Regular, Menlo, monospace" font-size="10.5" font-weight="600" letter-spacing="0.8" fill="#A2B1A8">ACTIVE DAYS (1Y)</text>
+  <text x="249.5" y="87" font-family="'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif" font-size="31" font-weight="800" letter-spacing="-0.8" fill="#E8EEEA">56 days</text>
+  <text x="249.5" y="111" font-family="'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif" font-size="12.5" fill="#A2B1A8">shipped in last year</text>
+  <rect x="447.0" y="18" width="199.5" height="114" rx="10" fill="#141D18" stroke="#25312A" stroke-width="1"/>
+  <g transform="translate(600.5,32.0) scale(0.889)">
+    <path d="M10 6h16v9a8 8 0 0 1-16 0V6z" fill="#D9B45A" stroke="#06120D" stroke-width="2.4" stroke-linejoin="round"/>
+    <path d="M10 9H5.5v3a4.5 4.5 0 0 0 4.5 4.5M26 9h4.5v3a4.5 4.5 0 0 1-4.5 4.5" fill="none" stroke="#06120D" stroke-width="2.4" stroke-linecap="round"/>
+    <rect x="15.5" y="23" width="5" height="5" fill="#D9B45A" stroke="#06120D" stroke-width="2.2"/>
+    <rect x="11" y="27.5" width="14" height="4.5" rx="2" fill="#FAFAF7" stroke="#06120D" stroke-width="2.2"/>
+  </g>
+  <text x="463.0" y="45" font-family="'JetBrains Mono', Consolas, ui-monospace, SFMono-Regular, Menlo, monospace" font-size="10.5" font-weight="600" letter-spacing="0.8" fill="#A2B1A8">LONGEST STREAK</text>
+  <text x="463.0" y="87" font-family="'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif" font-size="31" font-weight="800" letter-spacing="-0.8" fill="#E8EEEA">11 days</text>
+  <text x="463.0" y="111" font-family="'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif" font-size="12.5" fill="#A2B1A8">personal best</text>
+  <rect x="660.5" y="18" width="199.5" height="114" rx="10" fill="#141D18" stroke="#25312A" stroke-width="1"/>
+  <g transform="translate(814.0,32.0) scale(0.889)">
+    <rect x="5" y="19" width="7" height="12" rx="2" fill="#4CC38A" stroke="#06120D" stroke-width="2.3"/>
+    <rect x="14.5" y="12" width="7" height="19" rx="2" fill="#D9B45A" stroke="#06120D" stroke-width="2.3"/>
+    <rect x="24" y="5" width="7" height="26" rx="2" fill="#FAFAF7" stroke="#06120D" stroke-width="2.3"/>
+  </g>
+  <text x="676.5" y="45" font-family="'JetBrains Mono', Consolas, ui-monospace, SFMono-Regular, Menlo, monospace" font-size="10.5" font-weight="600" letter-spacing="0.8" fill="#A2B1A8">SINCE 2022</text>
+  <text x="676.5" y="87" font-family="'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif" font-size="31" font-weight="800" letter-spacing="-0.8" fill="#E8EEEA">916</text>
+  <text x="676.5" y="111" font-family="'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif" font-size="12.5" fill="#A2B1A8">all-time contributions</text>
+  <text x="440.0" y="158" text-anchor="middle" font-family="'JetBrains Mono', Consolas, ui-monospace, SFMono-Regular, Menlo, monospace" font-size="12" fill="#A2B1A8">24 public repos  ·  6 stars earned  ·  56 active days (1y)  ·  updated 26 Nov 2026</text>
+</svg>

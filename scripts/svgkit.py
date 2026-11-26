@@ -244,6 +244,11 @@ def stat_cartoon_icon(name: str, x: float, y: float, size: float, t: dict[str, s
             f'    <rect x="15.5" y="23" width="5" height="5" fill="{gd}" stroke="{ink}" stroke-width="2.2"/>\n'
             f'    <rect x="11" y="27.5" width="14" height="4.5" rx="2" fill="{cream}" stroke="{ink}" stroke-width="2.2"/>\n'
         )
+    elif name == "bolt":
+        inner = (
+            f'    <path d="M20 4L8 20h9l-1.5 12L28 16h-9L20 4z" '
+            f'fill="{gd}" stroke="{ink}" stroke-width="2.4" stroke-linejoin="round"/>\n'
+        )
     else:  # bars / rocket chart
         inner = (
             f'    <rect x="5" y="19" width="7" height="12" rx="2" fill="{em}" stroke="{ink}" stroke-width="2.3"/>\n'
@@ -254,7 +259,7 @@ def stat_cartoon_icon(name: str, x: float, y: float, size: float, t: dict[str, s
 
 
 def project_flat_illustration(kind: str, x: float, y: float, size: float, t: dict[str, str]) -> str:
-    """Large chunky flat-shaded cartoon illustrations for projects without live screenshots (zero stickers/sparkles)."""
+    """Crisp flat-shaded cartoon illustrations anchored inside a subtle card tile (zero sparkles/stickers)."""
     s = size / 84.0
     ink = _ink(t)
     em = t["primary"]
@@ -262,26 +267,60 @@ def project_flat_illustration(kind: str, x: float, y: float, size: float, t: dic
     cream = "#FAFAF7"
     g_open = f'  <g transform="translate({x:.1f},{y:.1f}) scale({s:.3f})">\n'
 
-    if kind == "flyer":
+    if kind == "badminton":
+        # Flat-shaded cartoon badminton racket + shuttlecock
+        inner = (
+            f'    <g transform="rotate(-32 36 42)">\n'
+            f'      <ellipse cx="36" cy="26" rx="16" ry="20" fill="{em}" fill-opacity="0.22" stroke="{em}" stroke-width="3.2"/>\n'
+            f'      <line x1="28" y1="10" x2="28" y2="42" stroke="{em}" stroke-width="1.4" stroke-opacity="0.7"/>\n'
+            f'      <line x1="36" y1="7" x2="36" y2="45" stroke="{em}" stroke-width="1.4" stroke-opacity="0.7"/>\n'
+            f'      <line x1="44" y1="10" x2="44" y2="42" stroke="{em}" stroke-width="1.4" stroke-opacity="0.7"/>\n'
+            f'      <line x1="21" y1="20" x2="51" y2="20" stroke="{em}" stroke-width="1.4" stroke-opacity="0.7"/>\n'
+            f'      <line x1="21" y1="30" x2="51" y2="30" stroke="{em}" stroke-width="1.4" stroke-opacity="0.7"/>\n'
+            f'      <line x1="36" y1="46" x2="36" y2="62" stroke="{ink}" stroke-width="3.6" stroke-linecap="round"/>\n'
+            f'      <rect x="31.5" y="60" width="9" height="15" rx="3" fill="{gd}" stroke="{ink}" stroke-width="2.6"/>\n'
+            f"    </g>\n"
+            f'    <g transform="translate(42,38) rotate(22 16 16)">\n'
+            f'      <polygon points="8,4 24,4 20,21 12,21" fill="{cream}" stroke="{ink}" stroke-width="2.6" stroke-linejoin="round"/>\n'
+            f'      <line x1="13" y1="4" x2="14" y2="21" stroke="{ink}" stroke-width="1.6"/>\n'
+            f'      <line x1="19" y1="4" x2="18" y2="21" stroke="{ink}" stroke-width="1.6"/>\n'
+            f'      <rect x="11" y="20" width="10" height="4" rx="1.2" fill="{gd}" stroke="{ink}" stroke-width="2.2"/>\n'
+            f'      <path d="M11.5 24h9a4.5 4.5 0 0 1-9 0z" fill="{em}" stroke="{ink}" stroke-width="2.2"/>\n'
+            f"    </g>\n"
+        )
+    elif kind == "syllabus":
+        # Flat-shaded cartoon course syllabus notebook + magnifying glass
+        inner = (
+            f'    <rect x="12" y="10" width="44" height="56" rx="7" fill="{cream}" stroke="{ink}" stroke-width="3"/>\n'
+            f'    <rect x="12" y="10" width="11" height="56" rx="4" fill="{em}" stroke="{ink}" stroke-width="3"/>\n'
+            f'    <line x1="30" y1="24" x2="48" y2="24" stroke="{ink}" stroke-width="3" stroke-linecap="round"/>\n'
+            f'    <line x1="30" y1="34" x2="46" y2="34" stroke="{ink}" stroke-width="2.8" stroke-linecap="round"/>\n'
+            f'    <line x1="30" y1="44" x2="42" y2="44" stroke="{ink}" stroke-width="2.8" stroke-linecap="round"/>\n'
+            f'    <circle cx="56" cy="52" r="14" fill="{gd}" stroke="{ink}" stroke-width="3"/>\n'
+            f'    <circle cx="56" cy="52" r="8" fill="{cream}" stroke="{ink}" stroke-width="2.4"/>\n'
+            f'    <line x1="66" y1="62" x2="76" y2="72" stroke="{ink}" stroke-width="5" stroke-linecap="round"/>\n'
+            f'    <line x1="66" y1="62" x2="76" y2="72" stroke="{em}" stroke-width="2.4" stroke-linecap="round"/>\n'
+        )
+    elif kind == "flyer":
         # Chunky cartoon camera lens scanning a flyer card
         inner = (
-            f'    <rect x="12" y="10" width="44" height="54" rx="7" fill="{cream}" stroke="{ink}" stroke-width="3"/>\n'
-            f'    <rect x="20" y="20" width="28" height="10" rx="3" fill="{em}" stroke="{ink}" stroke-width="2.4"/>\n'
-            f'    <line x1="20" y1="38" x2="46" y2="38" stroke="{ink}" stroke-width="3" stroke-linecap="round"/>\n'
-            f'    <line x1="20" y1="47" x2="38" y2="47" stroke="{ink}" stroke-width="3" stroke-linecap="round"/>\n'
-            f'    <rect x="38" y="34" width="38" height="32" rx="8" fill="{gd}" stroke="{ink}" stroke-width="3"/>\n'
-            f'    <circle cx="57" cy="50" r="10" fill="{cream}" stroke="{ink}" stroke-width="2.8"/>\n'
-            f'    <circle cx="57" cy="50" r="5" fill="{em}" stroke="{ink}" stroke-width="2.4"/>\n'
-            f'    <rect x="46" y="29" width="12" height="6" rx="2.5" fill="{em}" stroke="{ink}" stroke-width="2.4"/>\n'
+            f'    <rect x="10" y="10" width="44" height="54" rx="7" fill="{cream}" stroke="{ink}" stroke-width="3"/>\n'
+            f'    <rect x="18" y="20" width="28" height="10" rx="3" fill="{em}" stroke="{ink}" stroke-width="2.4"/>\n'
+            f'    <line x1="18" y1="38" x2="44" y2="38" stroke="{ink}" stroke-width="3" stroke-linecap="round"/>\n'
+            f'    <line x1="18" y1="47" x2="36" y2="47" stroke="{ink}" stroke-width="3" stroke-linecap="round"/>\n'
+            f'    <rect x="36" y="34" width="38" height="32" rx="8" fill="{gd}" stroke="{ink}" stroke-width="3"/>\n'
+            f'    <circle cx="55" cy="50" r="10" fill="{cream}" stroke="{ink}" stroke-width="2.8"/>\n'
+            f'    <circle cx="55" cy="50" r="5" fill="{em}" stroke="{ink}" stroke-width="2.4"/>\n'
+            f'    <rect x="44" y="29" width="12" height="6" rx="2.5" fill="{em}" stroke="{ink}" stroke-width="2.4"/>\n'
         )
-    else:  # hollow / radar dish & underground signal wave
+    else:  # hollow / radar dish & signal wave
         inner = (
-            f'    <path d="M22 68h36" stroke="{ink}" stroke-width="3.5" stroke-linecap="round"/>\n'
-            f'    <path d="M40 44L29 68M40 44l11 24" stroke="{ink}" stroke-width="3.2" stroke-linecap="round"/>\n'
-            f'    <path d="M20 26a26 26 0 0 0 36 36z" fill="{em}" stroke="{ink}" stroke-width="3" stroke-linejoin="round"/>\n'
-            f'    <line x1="38" y1="44" x2="54" y2="28" stroke="{ink}" stroke-width="3.2" stroke-linecap="round"/>\n'
-            f'    <circle cx="56" cy="26" r="5.5" fill="{gd}" stroke="{ink}" stroke-width="2.6"/>\n'
-            f'    <path d="M54 14a16 16 0 0 1 16 16" fill="none" stroke="{gd}" stroke-width="3.5" stroke-linecap="round"/>\n'
-            f'    <path d="M62 8a24 24 0 0 1 16 22" fill="none" stroke="{em}" stroke-width="3.5" stroke-linecap="round"/>\n'
+            f'    <path d="M20 68h36" stroke="{ink}" stroke-width="3.5" stroke-linecap="round"/>\n'
+            f'    <path d="M38 44L27 68M38 44l11 24" stroke="{ink}" stroke-width="3.2" stroke-linecap="round"/>\n'
+            f'    <path d="M18 26a26 26 0 0 0 36 36z" fill="{em}" stroke="{ink}" stroke-width="3" stroke-linejoin="round"/>\n'
+            f'    <line x1="36" y1="44" x2="52" y2="28" stroke="{ink}" stroke-width="3.2" stroke-linecap="round"/>\n'
+            f'    <circle cx="54" cy="26" r="5.5" fill="{gd}" stroke="{ink}" stroke-width="2.6"/>\n'
+            f'    <path d="M52 14a16 16 0 0 1 16 16" fill="none" stroke="{gd}" stroke-width="3.5" stroke-linecap="round"/>\n'
+            f'    <path d="M60 8a24 24 0 0 1 16 22" fill="none" stroke="{em}" stroke-width="3.5" stroke-linecap="round"/>\n'
         )
     return g_open + inner + "  </g>\n"

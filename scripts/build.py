@@ -23,7 +23,7 @@ ASSETS = ROOT / "assets"
 PROFILE_PATH = ROOT / "profile.json"
 TOKENS_PATH = ROOT / "scripts" / "tokens.json"
 README_PATH = ROOT / "README.md"
-ASSET_PREFIX = "v5-"
+ASSET_PREFIX = "v6-"
 
 
 def _picture(stem: str, alt: str, width: str = "100%", has_phone: bool = True, height: str | None = None) -> str:
@@ -132,14 +132,6 @@ def build() -> None:
         f"{_picture('graph-12m', alt_12m)}\n\n"
         f"</details>"
     )
-    for yr in sorted(state["yearly"].keys(), reverse=True):
-        yr_tot = state["yearly"][yr]["total"]
-        yr_alt = f"{yr_tot:,} contributions in {yr}"
-        blocks.append(
-            f"<details><summary>{yr}: {yr_tot:,} contributions</summary>\n\n"
-            f"{_picture(f'graph-{yr}', yr_alt)}\n\n"
-            f"</details>"
-        )
 
     blocks.append(_picture("label-work", "02 Work"))
     proj_lines = ['<p align="center">']

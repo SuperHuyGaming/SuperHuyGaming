@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-11-25",
+  "fetched_at": "2026-11-26",
   "user": "SuperHuyGaming",
   "created_year": 2022,
   "public_repos": 24,
@@ -8,8 +8,8 @@
   "active_days_year": 56,
   "last_year_contributions": 776,
   "all_time_contributions": 916,
-  "current_streak": 2,
-  "current_streak_start": "2026-11-23",
+  "current_streak": 0,
+  "current_streak_start": null,
   "longest_streak": 11,
   "repo_stars": {
     "SuperHuyGaming": 0,
@@ -40,10 +40,6 @@
   "calendar_6m": {
     "total": 767,
     "days": [
-      {
-        "date": "2026-05-27",
-        "count": 0
-      },
       {
         "date": "2026-05-28",
         "count": 0
@@ -770,6 +766,10 @@
       },
       {
         "date": "2026-11-25",
+        "count": 0
+      },
+      {
+        "date": "2026-11-26",
         "count": 0
       }
     ]
@@ -2248,6 +2248,10 @@
       {
         "date": "2026-11-25",
         "count": 0
+      },
+      {
+        "date": "2026-11-26",
+        "count": 0
       }
     ]
   },
@@ -3569,6 +3573,10 @@
         },
         {
           "date": "2026-11-25",
+          "count": 0
+        },
+        {
+          "date": "2026-11-26",
           "count": 0
         }
       ]

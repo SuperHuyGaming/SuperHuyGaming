@@ -292,8 +292,8 @@
   <rect x="628.7" y="152.9" width="14.7" height="14.7" rx="2.5" fill="#1A2620"/>
   <rect x="628.7" y="170.1" width="14.7" height="14.7" rx="2.5" fill="#1A2620"/>
   <rect x="628.7" y="187.3" width="14.7" height="14.7" rx="2.5" fill="#256F4B"/>
-  <rect x="645.9" y="84.0" width="14.7" height="14.7" rx="2.5" fill="#1A4531"/>
-  <rect x="645.9" y="101.2" width="14.7" height="14.7" rx="2.5" fill="#1A2620"/>
+  <rect x="645.9" y="84.0" width="14.7" height="14.7" rx="2.5" fill="#1A2620"/>
+  <rect x="645.9" y="101.2" width="14.7" height="14.7" rx="2.5" fill="#1A4531"/>
   <rect x="645.9" y="118.4" width="14.7" height="14.7" rx="2.5" fill="#1A4531"/>
   <rect x="645.9" y="135.7" width="14.7" height="14.7" rx="2.5" fill="#1A2620"/>
   <rect x="645.9" y="152.9" width="14.7" height="14.7" rx="2.5" fill="#1A2620"/>
@@ -373,4 +373,5 @@
   <rect x="835.3" y="101.2" width="14.7" height="14.7" rx="2.5" fill="#1A4531"/>
   <rect x="835.3" y="118.4" width="14.7" height="14.7" rx="2.5" fill="#1A4531"/>
   <rect x="835.3" y="135.7" width="14.7" height="14.7" rx="2.5" fill="#1A2620"/>
+  <rect x="835.3" y="152.9" width="14.7" height="14.7" rx="2.5" fill="#1A2620"/>
 </svg>

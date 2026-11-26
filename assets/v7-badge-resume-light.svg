@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="106" height="40" viewBox="0 0 106 40" fill="none" role="img">
+  <title>Resume</title>
+  <rect x="0.75" y="0.75" width="104.5" height="38.5" rx="8" fill="#FFFFFF" stroke="#D3E1D9" stroke-width="1"/>
+  <g transform="translate(13.0,10.0) scale(0.833)">
+    <path d="M5 3h9l5 5v13H5V3z" fill="#FAFAF7" stroke="#06120D" stroke-width="2.1" stroke-linejoin="round"/>
+    <path d="M14 3v5h5" fill="#B08A2E" stroke="#06120D" stroke-width="2" stroke-linejoin="round"/>
+    <path d="M8.5 12.5h7M8.5 16h5" stroke="#06120D" stroke-width="2" stroke-linecap="round"/>
+  </g>
+  <text x="41" y="24.5" font-family="'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif" font-size="13.5" font-weight="600" fill="#13221B">Resume</text>
+</svg>

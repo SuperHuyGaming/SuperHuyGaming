@@ -23,7 +23,7 @@ ASSETS = ROOT / "assets"
 PROFILE_PATH = ROOT / "profile.json"
 TOKENS_PATH = ROOT / "scripts" / "tokens.json"
 README_PATH = ROOT / "README.md"
-ASSET_PREFIX = "v6-"
+ASSET_PREFIX = "v7-"
 
 
 def _picture(stem: str, alt: str, width: str = "100%", has_phone: bool = True, height: str | None = None) -> str:
@@ -58,7 +58,7 @@ def build() -> None:
         for link in profile["links"]:
             _write_svg(f"badge-{link['id']}-{theme}.svg", render_badge(link, t))
 
-        _write_svg(f"label-activity-{theme}.svg", render_section_header("01", "Activity", "redrawn nightly via GitHub Actions", t, phone=False))
+        _write_svg(f"label-activity-{theme}.svg", render_section_header("01", "Activity", "", t, phone=False))
         _write_svg(f"label-activity-phone-{theme}.svg", render_section_header("01", "Activity", "", t, phone=True))
 
         _write_svg(f"github-{theme}.svg", render_github_stats(state, t, theme, phone=False))
@@ -94,7 +94,7 @@ def build() -> None:
                 render_heatmap(cal["days"], cal["total"], f"contributions in {yr}", t, theme, yr, show_numbers=False, phone=True),
             )
 
-        _write_svg(f"label-work-{theme}.svg", render_section_header("02", "Work", "featured full-stack & AI projects", t, phone=False))
+        _write_svg(f"label-work-{theme}.svg", render_section_header("02", "Work", "", t, phone=False))
         _write_svg(f"label-work-phone-{theme}.svg", render_section_header("02", "Work", "", t, phone=True))
 
         repo_stars = state.get("repo_stars", {})
@@ -126,13 +126,6 @@ def build() -> None:
     blocks.append(_picture("github", gh_alt))
     blocks.append(_picture("graph-6m", f"{state['calendar_6m']['total']:,} contributions in the last 6 months"))
 
-    alt_12m = f"{state['calendar_12m']['total']:,} contributions in the last 12 months"
-    blocks.append(
-        f"<details><summary>Last 12 months: {state['calendar_12m']['total']:,} contributions</summary>\n\n"
-        f"{_picture('graph-12m', alt_12m)}\n\n"
-        f"</details>"
-    )
-
     blocks.append(_picture("label-work", "02 Work"))
     proj_lines = ['<p align="center">']
     for proj in profile["projects"]:
@@ -150,10 +143,6 @@ def build() -> None:
     blocks.append(
         f'<p align="center"><sub>Live apps: {live_links}<br>'
         f'More work: {more_links}</sub></p>'
-    )
-    blocks.append(
-        f'<p align="center"><sub>Styled after <a href="{profile["domain_url"]}">{esc(profile["domain"])}</a> · '
-        f'redrawn every night by GitHub Actions</sub></p>'
     )
 
     README_PATH.write_text("\n\n".join(blocks) + "\n", encoding="utf-8")

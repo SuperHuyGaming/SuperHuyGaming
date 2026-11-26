@@ -23,7 +23,7 @@ ASSETS = ROOT / "assets"
 PROFILE_PATH = ROOT / "profile.json"
 TOKENS_PATH = ROOT / "scripts" / "tokens.json"
 README_PATH = ROOT / "README.md"
-ASSET_PREFIX = "v9-"
+ASSET_PREFIX = "v10-"
 
 
 def _picture(stem: str, alt: str, width: str = "100%", has_phone: bool = True, height: str | None = None) -> str:
@@ -56,7 +56,7 @@ def build() -> None:
         _write_svg(f"hero-phone-{theme}.svg", render_hero(profile, t, theme, phone=True))
 
         for link in profile["links"]:
-            _write_svg(f"badge-{link['id']}-{theme}.svg", render_badge(link, t))
+            _write_svg(f"badge-{link['id']}-{theme}.svg", render_badge(link, t, theme))
 
         _write_svg(f"label-activity-{theme}.svg", render_section_header("01", "Activity", "", t, phone=False))
         _write_svg(f"label-activity-phone-{theme}.svg", render_section_header("01", "Activity", "", t, phone=True))
@@ -110,7 +110,7 @@ def build() -> None:
 
     badge_lines = ['<p align="center">']
     for link in profile["links"]:
-        b_pic = _picture(f"badge-{link['id']}", link["label"], has_phone=False, height="40")
+        b_pic = _picture(f"badge-{link['id']}", link["label"], has_phone=False, height="44")
         badge_lines.append(f'<a href="{link["url"]}">{b_pic}</a>')
     badge_lines.append("</p>")
     blocks.append("\n".join(badge_lines))

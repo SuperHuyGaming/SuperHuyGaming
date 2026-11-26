@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="158" height="44" viewBox="0 0 158 44" fill="none" role="img">
+  <title>bentruong.dev</title>
+  <rect x="4" y="4" width="151" height="37" rx="10" fill="#13221B"/>
+  <rect x="1.5" y="1.5" width="151" height="37" rx="10" fill="#0B5D3B" stroke="#13221B" stroke-width="2"/>
+  <g transform="translate(13.0,10.0) scale(0.833)">
+    <circle cx="12" cy="12" r="9" fill="#FAFAF7" stroke="#06120D" stroke-width="2.1"/>
+    <ellipse cx="12" cy="12" rx="4.2" ry="9" fill="none" stroke="#06120D" stroke-width="1.9"/>
+    <path d="M3.5 9.5h17M3.5 14.5h17" stroke="#06120D" stroke-width="1.9"/>
+  </g>
+  <text x="41" y="25" font-family="'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#FFFFFF">bentruong.dev</text>
+</svg>

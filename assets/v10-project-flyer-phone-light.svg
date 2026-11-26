@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="432" height="220" viewBox="0 0 432 220" fill="none" role="img">
+  <title>Tournament Flyer Reader</title>
+  <rect x="6" y="6" width="422" height="210" rx="15" fill="#13221B"/>
+  <rect x="2" y="2" width="422" height="210" rx="15" fill="#F7E8C2" stroke="#13221B" stroke-width="2.2"/>
+  <text x="22" y="34" font-family="'JetBrains Mono', Consolas, ui-monospace, SFMono-Regular, Menlo, monospace" font-size="11" font-weight="700" letter-spacing="0.9" fill="#8A6A1E">COMPUTER VISION</text>
+  <g transform="translate(392.0,20.0) scale(0.667)">
+    <path d="M7 17L17 7M9 7h8v8" stroke="#4F6358" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <rect x="313" y="53" width="96" height="96" rx="13" fill="#13221B"/>
+  <rect x="310" y="50" width="96" height="96" rx="13" fill="#FFFFFF" stroke="#13221B" stroke-width="2"/>
+  <g transform="translate(320.0,60.0) scale(0.905)">
+    <rect x="10" y="10" width="44" height="54" rx="7" fill="#FAFAF7" stroke="#06120D" stroke-width="3"/>
+    <rect x="18" y="20" width="28" height="10" rx="3" fill="#0B5D3B" stroke="#06120D" stroke-width="2.4"/>
+    <line x1="18" y1="38" x2="44" y2="38" stroke="#06120D" stroke-width="3" stroke-linecap="round"/>
+    <line x1="18" y1="47" x2="36" y2="47" stroke="#06120D" stroke-width="3" stroke-linecap="round"/>
+    <rect x="36" y="34" width="38" height="32" rx="8" fill="#B08A2E" stroke="#06120D" stroke-width="3"/>
+    <circle cx="55" cy="50" r="10" fill="#FAFAF7" stroke="#06120D" stroke-width="2.8"/>
+    <circle cx="55" cy="50" r="5" fill="#0B5D3B" stroke="#06120D" stroke-width="2.4"/>
+    <rect x="44" y="29" width="12" height="6" rx="2.5" fill="#0B5D3B" stroke="#06120D" stroke-width="2.4"/>
+  </g>
+  <text x="22" y="66" font-family="'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif" font-size="20" font-weight="800" letter-spacing="-0.4" fill="#102119">Tournament Flyer Reader</text>
+  <text x="22" y="92" font-family="'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif" font-size="13" fill="#2B4437">Turns tournament flyers on</text>
+  <text x="22" y="111" font-family="'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif" font-size="13" fill="#2B4437">Instagram into clean, structured</text>
+  <text x="22" y="130" font-family="'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif" font-size="13" fill="#2B4437">event listings.</text>
+  <rect x="24" y="172" width="59" height="24" rx="6" fill="#13221B"/>
+  <rect x="22" y="170" width="59" height="24" rx="6" fill="#FAFAF7" stroke="#13221B" stroke-width="1.5"/>
+  <text x="51.5" y="186" text-anchor="middle" font-family="'JetBrains Mono', Consolas, ui-monospace, SFMono-Regular, Menlo, monospace" font-size="11.5" font-weight="600" fill="#102119">Python</text>
+  <rect x="90" y="172" width="59" height="24" rx="6" fill="#13221B"/>
+  <rect x="88" y="170" width="59" height="24" rx="6" fill="#FAFAF7" stroke="#13221B" stroke-width="1.5"/>
+  <text x="117.5" y="186" text-anchor="middle" font-family="'JetBrains Mono', Consolas, ui-monospace, SFMono-Regular, Menlo, monospace" font-size="11.5" font-weight="600" fill="#102119">GPT-4o</text>
+  <rect x="156" y="172" width="52" height="24" rx="6" fill="#13221B"/>
+  <rect x="154" y="170" width="52" height="24" rx="6" fill="#FAFAF7" stroke="#13221B" stroke-width="1.5"/>
+  <text x="180.0" y="186" text-anchor="middle" font-family="'JetBrains Mono', Consolas, ui-monospace, SFMono-Regular, Menlo, monospace" font-size="11.5" font-weight="600" fill="#102119">Kafka</text>
+</svg>

@@ -65,14 +65,39 @@ def render_hero(profile: dict[str, Any], t: dict[str, str], theme: str, phone: b
         ("work", "SWE Intern @ Deepiri", "AI bug-tracing agent"),
         ("shuttle", "GMU Badminton App", "Founder · 500+ players"),
     ]
+    if theme == "dark":
+        ink = "#06120D"
+        chip_fills = ["#1C563F", "#5C451A", "#1B4E56", "#35492A"]
+        chip_tc = "#F2F8F5"
+        snap_tile = "#172D24"
+    else:
+        ink = "#13221B"
+        chip_fills = ["#CFEAD9", "#F6E5B8", "#CCE8EC", "#DCE9CA"]
+        chip_tc = "#102119"
+        snap_tile = "#FFFFFF"
+
+    def _tactile_chip(x: float, y: float, label: str, fill: str, ic: str, fs: float = 12, h: float = 31) -> tuple[str, float]:
+        tw = approx_text_width(label, fs, bold=True)
+        w = round(tw + 20 + 22)
+        s = (
+            f'  <rect x="{x + 2.5:.1f}" y="{y + 2.5:.1f}" width="{w}" height="{h}" rx="8" fill="{ink}"/>\n'
+            f'  <rect x="{x:.1f}" y="{y:.1f}" width="{w}" height="{h}" rx="8" fill="{fill}" stroke="{ink}" stroke-width="1.8"/>\n'
+        )
+        from svgkit import mini_cartoon_icon
+        s += mini_cartoon_icon(ic, x + 8, y + (h - 16) / 2, 16, t)
+        s += (
+            f'  <text x="{x + 28 + tw / 2:.1f}" y="{y + h / 2 + fs * 0.35:.1f}" text-anchor="middle" '
+            f'font-family="{SANS_FONT}" font-size="{fs}" font-weight="700" fill="{chip_tc}">{esc(label)}</text>\n'
+        )
+        return s, w
 
     if not phone:
-        W, H = 880, 238
-        body = surface_frame(W, H, t, radius=12, fill_key="bg")
+        W, H = 880, 244
+        body = surface_frame(W, H, t, radius=16, fill_key="bg")
 
         # Left editorial column
         body += (
-            f'  <text x="36" y="42" font-family="{MONO_FONT}" font-size="11.5" font-weight="600" '
+            f'  <text x="36" y="42" font-family="{MONO_FONT}" font-size="11.5" font-weight="700" '
             f'letter-spacing="1.2" fill="{t["secondary"]}">GEORGE MASON CS  ·  BENTRUONG.DEV</text>\n'
         )
         body += (
@@ -80,7 +105,7 @@ def render_hero(profile: dict[str, Any], t: dict[str, str], theme: str, phone: b
             f'letter-spacing="-1.6" fill="{t["text"]}">{esc(profile["display_name"])}</text>\n'
         )
         body += (
-            f'  <text x="36" y="128" font-family="{SANS_FONT}" font-size="19" font-weight="600" '
+            f'  <text x="36" y="128" font-family="{SANS_FONT}" font-size="19" font-weight="700" '
             f'fill="{t["primary"]}">{esc(profile["title"])}</text>\n'
         )
         body += (
@@ -88,42 +113,47 @@ def render_hero(profile: dict[str, Any], t: dict[str, str], theme: str, phone: b
             f'fill="{t["muted"]}">{esc(profile["tagline"])}</text>\n'
         )
 
-        # 4 focus chips with chunky flat cartoon icons
-        cx, cy = 36, 178
+        # 4 tactile botanical focus chips
+        cx, cy = 36, 180
         for idx, tag in enumerate(profile["tags"]):
             ic = focus_icons[idx % len(focus_icons)]
-            c_svg, cw = chip(cx, cy, tag["label"], t, font_size=12, height=29, pad_x=10, icon_name=ic)
+            c_svg, cw = _tactile_chip(cx, cy, tag["label"], chip_fills[idx % len(chip_fills)], ic, fs=12, h=31)
             body += c_svg
-            cx += cw + 8
+            cx += cw + 9
 
-        # Crisp vertical hairline divider + right Snapshot column (no face, no logo)
-        dx = 594
-        body += f'  <line x1="{dx}" y1="28" x2="{dx}" y2="{H - 28}" stroke="{t["divider"]}" stroke-width="1"/>\n'
-        rx = dx + 24
+        # Crisp vertical divider + tactile right Snapshot column
+        dx = 590
+        body += f'  <line x1="{dx}" y1="26" x2="{dx}" y2="{H - 26}" stroke="{t["divider"]}" stroke-width="1"/>\n'
+        rx = dx + 22
         body += (
-            f'  <text x="{rx}" y="42" font-family="{MONO_FONT}" font-size="10.5" font-weight="700" '
+            f'  <text x="{rx}" y="41" font-family="{MONO_FONT}" font-size="10.5" font-weight="700" '
             f'letter-spacing="1.1" fill="{t["secondary"]}">SNAPSHOT</text>\n'
         )
         for idx, (icon_name, top_txt, sub_txt) in enumerate(snapshot):
-            ry = 62 + idx * 52
-            body += snapshot_cartoon_icon(icon_name, rx, ry, 28, t)
+            ry = 58 + idx * 56
+            # Tactile mini icon box
             body += (
-                f'  <text x="{rx + 38}" y="{ry + 12}" font-family="{SANS_FONT}" font-size="13.5" '
-                f'font-weight="600" fill="{t["text"]}">{esc(top_txt)}</text>\n'
+                f'  <rect x="{rx + 2.5}" y="{ry + 2.5}" width="38" height="38" rx="10" fill="{ink}"/>\n'
+                f'  <rect x="{rx}" y="{ry}" width="38" height="38" rx="10" fill="{snap_tile}" stroke="{ink}" stroke-width="1.8"/>\n'
+            )
+            body += snapshot_cartoon_icon(icon_name, rx + 5, ry + 5, 28, t)
+            body += (
+                f'  <text x="{rx + 48}" y="{ry + 16}" font-family="{SANS_FONT}" font-size="13.5" '
+                f'font-weight="700" fill="{t["text"]}">{esc(top_txt)}</text>\n'
             )
             body += (
-                f'  <text x="{rx + 38}" y="{ry + 29}" font-family="{MONO_FONT}" font-size="11.5" '
+                f'  <text x="{rx + 48}" y="{ry + 33}" font-family="{MONO_FONT}" font-size="11.5" '
                 f'fill="{t["muted"]}">{esc(sub_txt)}</text>\n'
             )
 
         return svg_doc(W, H, "", body, title=f"{profile['display_name']} — {profile['title']}")
 
-    # Phone layout (clean open hero without duplicate face)
-    W, H = 440, 282
-    body = surface_frame(W, H, t, radius=12, fill_key="bg")
+    # Phone layout
+    W, H = 440, 290
+    body = surface_frame(W, H, t, radius=16, fill_key="bg")
 
     body += (
-        f'  <text x="24" y="36" font-family="{MONO_FONT}" font-size="10.5" font-weight="600" '
+        f'  <text x="24" y="36" font-family="{MONO_FONT}" font-size="10.5" font-weight="700" '
         f'letter-spacing="1.0" fill="{t["secondary"]}">GEORGE MASON CS · BENTRUONG.DEV</text>\n'
     )
     body += (
@@ -131,7 +161,7 @@ def render_hero(profile: dict[str, Any], t: dict[str, str], theme: str, phone: b
         f'letter-spacing="-1.2" fill="{t["text"]}">{esc(profile["display_name"])}</text>\n'
     )
     body += (
-        f'  <text x="24" y="110" font-family="{SANS_FONT}" font-size="17" font-weight="600" '
+        f'  <text x="24" y="110" font-family="{SANS_FONT}" font-size="17" font-weight="700" '
         f'fill="{t["primary"]}">{esc(profile["title"])}</text>\n'
     )
     for idx, line in enumerate(_wrap_text(profile["tagline"], 44)[:2]):
@@ -143,38 +173,46 @@ def render_hero(profile: dict[str, Any], t: dict[str, str], theme: str, phone: b
     cx, cy = 24, 192
     for idx, tag in enumerate(profile["tags"]):
         ic = focus_icons[idx % len(focus_icons)]
-        c_svg, cw = chip(cx, cy, tag["label"], t, font_size=12, height=30, pad_x=10, icon_name=ic)
+        c_svg, cw = _tactile_chip(cx, cy, tag["label"], chip_fills[idx % len(chip_fills)], ic, fs=12, h=30)
         if cx + cw > W - 20:
             cx = 24
-            cy += 38
-            c_svg, cw = chip(cx, cy, tag["label"], t, font_size=12, height=30, pad_x=10, icon_name=ic)
+            cy += 39
+            c_svg, cw = _tactile_chip(cx, cy, tag["label"], chip_fills[idx % len(chip_fills)], ic, fs=12, h=30)
         body += c_svg
         cx += cw + 8
 
     return svg_doc(W, H, "", body, title=f"{profile['display_name']} — {profile['title']}")
 
 
-def render_badge(link: dict[str, Any], t: dict[str, str]) -> str:
+def render_badge(link: dict[str, Any], t: dict[str, str], theme: str = "dark") -> str:
     label = link["label"]
     icon = link.get("icon", "globe")
+    lid = link["id"]
     is_primary = link.get("variant") == "primary"
 
-    lw = approx_text_width(label, 13.5, bold=True)
-    W = round(14 + 20 + 8 + lw + 18)
-    H = 40
+    if theme == "dark":
+        ink = "#06120D"
+        palette = {"site": t["primary"], "resume": "#5C451A", "li": "#1B4E56", "mail": "#1C563F"}
+        tc = "#06120D" if is_primary else "#FFFFFF"
+    else:
+        ink = "#13221B"
+        palette = {"site": t["primary"], "resume": "#F6E5B8", "li": "#CCE8EC", "mail": "#CFEAD9"}
+        tc = "#FFFFFF" if is_primary else "#102119"
 
-    fill = t["primary"] if is_primary else t["paper"]
-    stroke = t["primary"] if is_primary else t["divider"]
-    tc = t["on_primary"] if is_primary else t["text"]
+    fill = palette.get(lid, t["paper"])
+    lw = approx_text_width(label, 13.5, bold=True)
+    W = round(14 + 20 + 8 + lw + 20)
+    H = 44
 
     body = (
-        f'  <rect x="0.75" y="0.75" width="{W - 1.5}" height="{H - 1.5}" rx="8" '
-        f'fill="{fill}" stroke="{stroke}" stroke-width="1"/>\n'
+        f'  <rect x="4" y="4" width="{W - 7}" height="{H - 7}" rx="10" fill="{ink}"/>\n'
+        f'  <rect x="1.5" y="1.5" width="{W - 7}" height="{H - 7}" rx="10" '
+        f'fill="{fill}" stroke="{ink}" stroke-width="2"/>\n'
     )
     body += badge_cartoon_icon(icon, 13, 10, 20, t, on_primary=is_primary)
     body += (
-        f'  <text x="41" y="24.5" font-family="{SANS_FONT}" font-size="13.5" '
-        f'font-weight="600" fill="{tc}">{esc(label)}</text>\n'
+        f'  <text x="41" y="25" font-family="{SANS_FONT}" font-size="13.5" '
+        f'font-weight="700" fill="{tc}">{esc(label)}</text>\n'
     )
     return svg_doc(W, H, "", body, title=label)
 
@@ -421,33 +459,42 @@ def render_heatmap(
     max_count = max((d["count"] for d in sorted_days), default=0)
 
     W = 440 if phone else 880
-    pad_x = 18 if phone else 26
+    outer_pad = 14 if phone else 18
+    pad_x = (16 if phone else 22) + outer_pad
     avail_w = W - pad_x * 2
     gap = 4 if (show_numbers and n_weeks <= 28) else 2.5
-    cell = min((avail_w - gap * (n_weeks - 1)) / max(n_weeks, 1), 26.0)
+    cell = min((avail_w - gap * (n_weeks - 1)) / max(n_weeks, 1), 25.0)
     grid_w = n_weeks * cell + (n_weeks - 1) * gap
     grid_x = (W - grid_w) / 2
-    grid_y = 76
+    grid_y = outer_pad + 72
     grid_h = 7 * cell + 6 * gap
-    H = int(grid_y + grid_h + 24)
+    inner_h = int(72 + grid_h + 22)
+    H = inner_h + outer_pad * 2 + 4
 
-    body = surface_frame(W, H, t, radius=12, fill_key="paper")
+    ink = "#06120D" if theme == "dark" else "#13221B"
+    body = surface_frame(W, H, t, radius=16, fill_key="bg")
+    body += (
+        f'  <rect x="{outer_pad + 4}" y="{outer_pad + 4}" width="{W - outer_pad * 2}" height="{inner_h}" '
+        f'rx="13" fill="{ink}"/>\n'
+        f'  <rect x="{outer_pad}" y="{outer_pad}" width="{W - outer_pad * 2}" height="{inner_h}" '
+        f'rx="13" fill="{t["paper"]}" stroke="{ink}" stroke-width="2"/>\n'
+    )
 
     tot_str = _fmt_num(total)
-    tot_size = 18 if phone else 20
+    tot_size = 18 if phone else 22
     tot_w = approx_text_width(tot_str, tot_size, bold=True)
     body += (
-        f'  <text x="{pad_x}" y="36" font-family="{SANS_FONT}" font-size="{tot_size}" '
-        f'font-weight="700" fill="{t["text"]}">{esc(tot_str)}</text>\n'
+        f'  <text x="{pad_x}" y="{outer_pad + 34}" font-family="{SANS_FONT}" font-size="{tot_size}" '
+        f'font-weight="800" fill="{t["text"]}">{esc(tot_str)}</text>\n'
     )
     body += (
-        f'  <text x="{pad_x + tot_w + 8:.1f}" y="35" font-family="{MONO_FONT}" '
+        f'  <text x="{pad_x + tot_w + 8:.1f}" y="{outer_pad + 33}" font-family="{MONO_FONT}" '
         f'font-size="{11.5 if phone else 13}" fill="{t["muted"]}">{esc(subtitle)}</text>\n'
     )
 
     if not phone:
         lx = W - pad_x - 118
-        ly = 23
+        ly = outer_pad + 21
         body += (
             f'  <text x="{lx - 6}" y="{ly + 10}" text-anchor="end" font-family="{MONO_FONT}" '
             f'font-size="11" fill="{t["muted"]}">Less</text>\n'
@@ -516,48 +563,76 @@ def render_project_card(
     theme: str,
     phone: bool = False,
 ) -> str:
-    """Uniform, balanced 2x2 project cards with anchored flat-shaded cartoon illustration tile."""
+    """Tactile Forest-Studio 2x2 project cards (Sketch C) with rich botanical fills & crisp ink offset."""
     pid = proj["id"]
     overline = proj["overline"]
     if stars > 0:
         overline = f"{overline} · ★ {stars}"
 
-    W, H = 432, 210
-    body = surface_frame(W, H, t, radius=12, fill_key="paper")
+    if theme == "dark":
+        ink = "#06120D"
+        fills = {"badminton": "#194836", "syllabus": "#18424A", "flyer": "#4B3917", "hollow": "#2B3D23"}
+        tile_bg = "#0E1E17"
+        chip_bg = "#102119"
+        title_c = "#FFFFFF"
+        desc_c = "#D5E8DE"
+        over_c = t["secondary"]
+    else:
+        ink = "#13221B"
+        fills = {"badminton": "#D4ECDD", "syllabus": "#CFE8EC", "flyer": "#F7E8C2", "hollow": "#E0ECD0"}
+        tile_bg = "#FFFFFF"
+        chip_bg = "#FAFAF7"
+        title_c = "#102119"
+        desc_c = "#2B4437"
+        over_c = "#8A6A1E"
 
-    # Plain gold overline + corner arrow
+    fill = fills.get(pid, t["paper"])
+    W, H = 432, 220
+    body = (
+        f'  <rect x="6" y="6" width="{W - 10}" height="{H - 10}" rx="15" fill="{ink}"/>\n'
+        f'  <rect x="2" y="2" width="{W - 10}" height="{H - 10}" rx="15" fill="{fill}" stroke="{ink}" stroke-width="2.2"/>\n'
+    )
+
+    # Gold overline + corner arrow
     body += (
         f'  <text x="22" y="34" font-family="{MONO_FONT}" font-size="11" font-weight="700" '
-        f'letter-spacing="0.9" fill="{t["secondary"]}">{esc(overline)}</text>\n'
+        f'letter-spacing="0.9" fill="{over_c}">{esc(overline)}</text>\n'
     )
-    body += badge_cartoon_icon("arrow_ne", W - 36, 20, 16, t)
+    body += badge_cartoon_icon("arrow_ne", W - 40, 20, 16, t)
 
-    # Anchored illustration tile on right
-    tx, ty, ts = W - 118, 52, 96
+    # Tactile anchored illustration tile on right
+    tx, ty, ts = W - 122, 50, 96
     body += (
-        f'  <rect x="{tx}" y="{ty}" width="{ts}" height="{ts}" rx="12" '
-        f'fill="{t["bg"]}" stroke="{t["divider"]}" stroke-width="1"/>\n'
+        f'  <rect x="{tx + 3}" y="{ty + 3}" width="{ts}" height="{ts}" rx="13" fill="{ink}"/>\n'
+        f'  <rect x="{tx}" y="{ty}" width="{ts}" height="{ts}" rx="13" '
+        f'fill="{tile_bg}" stroke="{ink}" stroke-width="2"/>\n'
     )
     body += project_flat_illustration(pid, tx + 10, ty + 10, 76, t)
 
-    # Title + 3-line wrapped description on left (guaranteed clear of tile)
+    # Title + 3-line wrapped description
     body += (
-        f'  <text x="22" y="64" font-family="{SANS_FONT}" font-size="19" font-weight="700" '
-        f'letter-spacing="-0.3" fill="{t["text"]}">{esc(proj["name"])}</text>\n'
+        f'  <text x="22" y="66" font-family="{SANS_FONT}" font-size="20" font-weight="800" '
+        f'letter-spacing="-0.4" fill="{title_c}">{esc(proj["name"])}</text>\n'
     )
-    for idx, ln in enumerate(_wrap_text(proj["line"], 35)[:3]):
+    for idx, ln in enumerate(_wrap_text(proj["line"], 34)[:3]):
         body += (
-            f'  <text x="22" y="{90 + idx * 19}" font-family="{SANS_FONT}" font-size="13" '
-            f'fill="{t["muted"]}">{esc(ln)}</text>\n'
+            f'  <text x="22" y="{92 + idx * 19}" font-family="{SANS_FONT}" font-size="13" '
+            f'fill="{desc_c}">{esc(ln)}</text>\n'
         )
 
-    # Clean neutral tech chips along bottom
-    px, py = 22, H - 44
+    # Tactile mini tech chips along bottom
+    px, py = 22, H - 50
     for tech in proj["chips"]:
-        c_svg, cw = chip(px, py, tech, t, font_size=11.5, height=24, pad_x=9, mono=True)
-        if px + cw > W - 20:
+        tw = approx_text_width(tech, 11.5, mono=True)
+        cw = round(tw + 18)
+        if px + cw > W - 24:
             break
-        body += c_svg
-        px += cw + 6
+        body += (
+            f'  <rect x="{px + 2}" y="{py + 2}" width="{cw}" height="24" rx="6" fill="{ink}"/>\n'
+            f'  <rect x="{px}" y="{py}" width="{cw}" height="24" rx="6" fill="{chip_bg}" stroke="{ink}" stroke-width="1.5"/>\n'
+            f'  <text x="{px + cw / 2:.1f}" y="{py + 16}" text-anchor="middle" font-family="{MONO_FONT}" '
+            f'font-size="11.5" font-weight="600" fill="{title_c}">{esc(tech)}</text>\n'
+        )
+        px += cw + 7
 
     return svg_doc(W, H, "", body, title=proj["name"])

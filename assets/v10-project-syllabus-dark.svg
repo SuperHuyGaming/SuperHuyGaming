@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="432" height="220" viewBox="0 0 432 220" fill="none" role="img">
+  <title>Syllabus Searcher</title>
+  <rect x="6" y="6" width="422" height="210" rx="15" fill="#06120D"/>
+  <rect x="2" y="2" width="422" height="210" rx="15" fill="#18424A" stroke="#06120D" stroke-width="2.2"/>
+  <text x="22" y="34" font-family="'JetBrains Mono', Consolas, ui-monospace, SFMono-Regular, Menlo, monospace" font-size="11" font-weight="700" letter-spacing="0.9" fill="#E2BE66">1,000+ SYLLABI · LIVE · ★ 1</text>
+  <g transform="translate(392.0,20.0) scale(0.667)">
+    <path d="M7 17L17 7M9 7h8v8" stroke="#9EB8AA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <rect x="313" y="53" width="96" height="96" rx="13" fill="#06120D"/>
+  <rect x="310" y="50" width="96" height="96" rx="13" fill="#0E1E17" stroke="#06120D" stroke-width="2"/>
+  <g transform="translate(320.0,60.0) scale(0.905)">
+    <rect x="12" y="10" width="44" height="56" rx="7" fill="#FAFAF7" stroke="#06120D" stroke-width="3"/>
+    <rect x="12" y="10" width="11" height="56" rx="4" fill="#4CC38A" stroke="#06120D" stroke-width="3"/>
+    <line x1="30" y1="24" x2="48" y2="24" stroke="#06120D" stroke-width="3" stroke-linecap="round"/>
+    <line x1="30" y1="34" x2="46" y2="34" stroke="#06120D" stroke-width="2.8" stroke-linecap="round"/>
+    <line x1="30" y1="44" x2="42" y2="44" stroke="#06120D" stroke-width="2.8" stroke-linecap="round"/>
+    <circle cx="56" cy="52" r="14" fill="#E2BE66" stroke="#06120D" stroke-width="3"/>
+    <circle cx="56" cy="52" r="8" fill="#FAFAF7" stroke="#06120D" stroke-width="2.4"/>
+    <line x1="66" y1="62" x2="76" y2="72" stroke="#06120D" stroke-width="5" stroke-linecap="round"/>
+    <line x1="66" y1="62" x2="76" y2="72" stroke="#4CC38A" stroke-width="2.4" stroke-linecap="round"/>
+  </g>
+  <text x="22" y="66" font-family="'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif" font-size="20" font-weight="800" letter-spacing="-0.4" fill="#FFFFFF">Syllabus Searcher</text>
+  <text x="22" y="92" font-family="'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif" font-size="13" fill="#D5E8DE">Course syllabi across schools</text>
+  <text x="22" y="111" font-family="'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif" font-size="13" fill="#D5E8DE">since Fall 2022 in one place, with</text>
+  <text x="22" y="130" font-family="'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif" font-size="13" fill="#D5E8DE">full-text search.</text>
+  <rect x="24" y="172" width="52" height="24" rx="6" fill="#06120D"/>
+  <rect x="22" y="170" width="52" height="24" rx="6" fill="#102119" stroke="#06120D" stroke-width="1.5"/>
+  <text x="48.0" y="186" text-anchor="middle" font-family="'JetBrains Mono', Consolas, ui-monospace, SFMono-Regular, Menlo, monospace" font-size="11.5" font-weight="600" fill="#FFFFFF">React</text>
+  <rect x="83" y="172" width="59" height="24" rx="6" fill="#06120D"/>
+  <rect x="81" y="170" width="59" height="24" rx="6" fill="#102119" stroke="#06120D" stroke-width="1.5"/>
+  <text x="110.5" y="186" text-anchor="middle" font-family="'JetBrains Mono', Consolas, ui-monospace, SFMono-Regular, Menlo, monospace" font-size="11.5" font-weight="600" fill="#FFFFFF">Python</text>
+  <rect x="149" y="172" width="87" height="24" rx="6" fill="#06120D"/>
+  <rect x="147" y="170" width="87" height="24" rx="6" fill="#102119" stroke="#06120D" stroke-width="1.5"/>
+  <text x="190.5" y="186" text-anchor="middle" font-family="'JetBrains Mono', Consolas, ui-monospace, SFMono-Regular, Menlo, monospace" font-size="11.5" font-weight="600" fill="#FFFFFF">AWS Lambda</text>
+  <rect x="243" y="172" width="73" height="24" rx="6" fill="#06120D"/>
+  <rect x="241" y="170" width="73" height="24" rx="6" fill="#102119" stroke="#06120D" stroke-width="1.5"/>
+  <text x="277.5" y="186" text-anchor="middle" font-family="'JetBrains Mono', Consolas, ui-monospace, SFMono-Regular, Menlo, monospace" font-size="11.5" font-weight="600" fill="#FFFFFF">DynamoDB</text>
+  <rect x="323" y="172" width="73" height="24" rx="6" fill="#06120D"/>
+  <rect x="321" y="170" width="73" height="24" rx="6" fill="#102119" stroke="#06120D" stroke-width="1.5"/>
+  <text x="357.5" y="186" text-anchor="middle" font-family="'JetBrains Mono', Consolas, ui-monospace, SFMono-Regular, Menlo, monospace" font-size="11.5" font-weight="600" fill="#FFFFFF">Supabase</text>
+</svg>

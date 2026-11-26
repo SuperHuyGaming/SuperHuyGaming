@@ -45,17 +45,40 @@ def svg_doc(width: int, height: int, defs: str, body: str, title: str = "") -> s
     )
 
 
+def blueprint_grid_defs(pid: str, t: dict[str, str], theme: str = "dark", step: int = 28) -> str:
+    stroke = "#284A3A" if theme == "dark" else "#C9DDD2"
+    opacity = "0.45" if theme == "dark" else "0.55"
+    return (
+        f'    <pattern id="{pid}" width="{step}" height="{step}" patternUnits="userSpaceOnUse">\n'
+        f'      <path d="M {step} 0 L 0 0 0 {step}" fill="none" stroke="{stroke}" '
+        f'stroke-width="0.8" stroke-opacity="{opacity}"/>\n'
+        f"    </pattern>\n"
+    )
+
+
 def surface_frame(
     width: int,
     height: int,
     t: dict[str, str],
-    radius: int = 12,
+    radius: int = 16,
     fill_key: str = "bg",
+    pattern_id: str | None = None,
+    theme: str = "dark",
 ) -> str:
-    return (
-        f'  <rect x="0.75" y="0.75" width="{width - 1.5}" height="{height - 1.5}" '
-        f'rx="{radius}" fill="{t[fill_key]}" stroke="{t["divider"]}" stroke-width="1"/>\n'
+    ink = "#06120D" if theme == "dark" else "#13221B"
+    nw = width - 6.5
+    nh = height - 6.5
+    out = (
+        f'  <rect x="5" y="5" width="{nw:.1f}" height="{nh:.1f}" rx="{radius}" fill="{ink}"/>\n'
+        f'  <rect x="1.5" y="1.5" width="{nw:.1f}" height="{nh:.1f}" rx="{radius}" '
+        f'fill="{t[fill_key]}" stroke="{ink}" stroke-width="2"/>\n'
     )
+    if pattern_id:
+        out += (
+            f'  <rect x="2.5" y="2.5" width="{nw - 2:.1f}" height="{nh - 2:.1f}" '
+            f'rx="{max(radius - 1, 2)}" fill="url(#{pattern_id})"/>\n'
+        )
+    return out
 
 
 def chip(

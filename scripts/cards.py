@@ -10,6 +10,7 @@ from svgkit import (
     SANS_FONT,
     approx_text_width,
     badge_cartoon_icon,
+    blueprint_grid_defs,
     chip,
     esc,
     load_data_uri,
@@ -91,9 +92,12 @@ def render_hero(profile: dict[str, Any], t: dict[str, str], theme: str, phone: b
         )
         return s, w
 
+    pid = f"hero-grid-{theme}-{'p' if phone else 'd'}"
+    defs = blueprint_grid_defs(pid, t, theme)
+
     if not phone:
-        W, H = 880, 244
-        body = surface_frame(W, H, t, radius=16, fill_key="bg")
+        W, H = 880, 248
+        body = surface_frame(W, H, t, radius=16, fill_key="bg", pattern_id=pid, theme=theme)
 
         # Left editorial column
         body += (
@@ -146,11 +150,11 @@ def render_hero(profile: dict[str, Any], t: dict[str, str], theme: str, phone: b
                 f'fill="{t["muted"]}">{esc(sub_txt)}</text>\n'
             )
 
-        return svg_doc(W, H, "", body, title=f"{profile['display_name']} — {profile['title']}")
+        return svg_doc(W, H, defs, body, title=f"{profile['display_name']} — {profile['title']}")
 
     # Phone layout
-    W, H = 440, 290
-    body = surface_frame(W, H, t, radius=16, fill_key="bg")
+    W, H = 440, 294
+    body = surface_frame(W, H, t, radius=16, fill_key="bg", pattern_id=pid, theme=theme)
 
     body += (
         f'  <text x="24" y="36" font-family="{MONO_FONT}" font-size="10.5" font-weight="700" '
@@ -181,7 +185,7 @@ def render_hero(profile: dict[str, Any], t: dict[str, str], theme: str, phone: b
         body += c_svg
         cx += cw + 8
 
-    return svg_doc(W, H, "", body, title=f"{profile['display_name']} — {profile['title']}")
+    return svg_doc(W, H, defs, body, title=f"{profile['display_name']} — {profile['title']}")
 
 
 def render_badge(link: dict[str, Any], t: dict[str, str], theme: str = "dark") -> str:
@@ -302,9 +306,12 @@ def render_github_stats(state: dict[str, Any], t: dict[str, str], theme: str, ph
         ("bolt_sm", _fmt_num(state["active_days_year"]), "active days (1y)"),
     ]
 
+    pid = f"gh-grid-{theme}-{'p' if phone else 'd'}"
+    defs = blueprint_grid_defs(pid, t, theme)
+
     if not phone:
-        W, H = 880, 240
-        body = surface_frame(W, H, t, radius=16, fill_key="bg")
+        W, H = 880, 244
+        body = surface_frame(W, H, t, radius=16, fill_key="bg", pattern_id=pid, theme=theme)
 
         gap = 14
         pad = 20
@@ -355,11 +362,11 @@ def render_github_stats(state: dict[str, Any], t: dict[str, str], theme: str, ph
                 f'fill="{sub_c}">{esc(lbl)}</text>\n'
             )
 
-        return svg_doc(W, H, "", body, title="GitHub Activity Stats")
+        return svg_doc(W, H, defs, body, title="GitHub Activity Stats")
 
     # Phone layout (2x2 tactile cards + 3 stacked tactile mini-cards)
-    W, H = 440, 444
-    body = surface_frame(W, H, t, radius=16, fill_key="bg")
+    W, H = 440, 448
+    body = surface_frame(W, H, t, radius=16, fill_key="bg", pattern_id=pid, theme=theme)
     cw = 192
     ch = 116
     for idx, c in enumerate(cards):
@@ -405,7 +412,7 @@ def render_github_stats(state: dict[str, Any], t: dict[str, str], theme: str, ph
         )
         fy += 50
 
-    return svg_doc(W, H, "", body, title="GitHub Activity Stats")
+    return svg_doc(W, H, defs, body, title="GitHub Activity Stats")
 
 
 def _cell_level(count: int, max_count: int) -> int:
@@ -472,7 +479,9 @@ def render_heatmap(
     H = inner_h + outer_pad * 2 + 4
 
     ink = "#06120D" if theme == "dark" else "#13221B"
-    body = surface_frame(W, H, t, radius=16, fill_key="bg")
+    pid = f"hm-grid-{graph_id}-{theme}-{'p' if phone else 'd'}"
+    defs = blueprint_grid_defs(pid, t, theme)
+    body = surface_frame(W, H, t, radius=16, fill_key="bg", pattern_id=pid, theme=theme)
     body += (
         f'  <rect x="{outer_pad + 4}" y="{outer_pad + 4}" width="{W - outer_pad * 2}" height="{inner_h}" '
         f'rx="13" fill="{ink}"/>\n'
@@ -553,7 +562,7 @@ def render_heatmap(
                     f'font-weight="{"700" if cnt > 0 else "400"}" fill="{tc}">{cnt}</text>\n'
                 )
 
-    return svg_doc(W, H, "", body, title=f"{tot_str} {subtitle}")
+    return svg_doc(W, H, defs, body, title=f"{tot_str} {subtitle}")
 
 
 def render_project_card(

@@ -172,41 +172,40 @@ def badge_cartoon_icon(name: str, x: float, y: float, size: float, t: dict[str, 
     return g_open + inner + "  </g>\n"
 
 
-def portrait_charm_shuttlecock(x: float, y: float, size: float, t: dict[str, str]) -> str:
-    """Chunky flat-shaded cartoon badminton shuttlecock badge (personal touch, zero AI clichés)."""
-    s = size / 48.0
+def snapshot_cartoon_icon(name: str, x: float, y: float, size: float, t: dict[str, str]) -> str:
+    """Small chunky flat-shaded cartoon icons for the hero snapshot column (zero sparkles/glow)."""
+    s = size / 28.0
     ink = _ink(t)
     em = t["primary"]
     gd = t["secondary"]
     cream = "#FAFAF7"
-    return (
-        f'  <g transform="translate({x:.1f},{y:.1f}) scale({s:.3f})">\n'
-        f'    <circle cx="24" cy="24" r="21" fill="{t["paper"]}" stroke="{t["divider"]}" stroke-width="2"/>\n'
-        f'    <g transform="rotate(-32 24 24)">\n'
-        f'      <polygon points="15,10 33,10 29,29 19,29" fill="{cream}" stroke="{ink}" stroke-width="2.4" stroke-linejoin="round"/>\n'
-        f'      <line x1="20" y1="10" x2="22" y2="29" stroke="{ink}" stroke-width="1.8"/>\n'
-        f'      <line x1="28" y1="10" x2="26" y2="29" stroke="{ink}" stroke-width="1.8"/>\n'
-        f'      <rect x="18" y="27" width="12" height="4.5" rx="1.5" fill="{gd}" stroke="{ink}" stroke-width="2.2"/>\n'
-        f'      <path d="M18.5 31.5h11a5.5 5.5 0 0 1-11 0z" fill="{em}" stroke="{ink}" stroke-width="2.2"/>\n'
-        f"    </g>\n"
-        f"  </g>\n"
-    )
+    g_open = f'  <g transform="translate({x:.1f},{y:.1f}) scale({s:.3f})">\n'
 
-
-def portrait_charm_code(x: float, y: float, size: float, t: dict[str, str]) -> str:
-    """Chunky flat-shaded cartoon terminal/code badge tucked next to portrait."""
-    s = size / 44.0
-    ink = _ink(t)
-    em = t["primary"]
-    gd = t["secondary"]
-    return (
-        f'  <g transform="translate({x:.1f},{y:.1f}) scale({s:.3f})">\n'
-        f'    <circle cx="22" cy="22" r="19" fill="{t["paper"]}" stroke="{t["divider"]}" stroke-width="2"/>\n'
-        f'    <rect x="9" y="12" width="26" height="20" rx="4" fill="{em}" stroke="{ink}" stroke-width="2.4"/>\n'
-        f'    <path d="M15 19l4 3-4 3" stroke="{ink}" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>\n'
-        f'    <line x1="22" y1="25" x2="29" y2="25" stroke="{gd}" stroke-width="2.8" stroke-linecap="round"/>\n'
-        f"  </g>\n"
-    )
+    if name == "grad":
+        inner = (
+            f'    <polygon points="14,5 26,11 14,17 2,11" fill="{em}" stroke="{ink}" stroke-width="2.2" stroke-linejoin="round"/>\n'
+            f'    <path d="M7 14v6c0 2 3.2 3.5 7 3.5s7-1.5 7-3.5v-6" fill="{cream}" stroke="{ink}" stroke-width="2.2" stroke-linejoin="round"/>\n'
+            f'    <path d="M24 12v7" stroke="{gd}" stroke-width="2.4" stroke-linecap="round"/>\n'
+            f'    <circle cx="24" cy="20" r="2" fill="{gd}" stroke="{ink}" stroke-width="1.5"/>\n'
+        )
+    elif name == "work":
+        inner = (
+            f'    <rect x="3" y="8" width="22" height="15" rx="3.5" fill="{gd}" stroke="{ink}" stroke-width="2.2"/>\n'
+            f'    <path d="M9.5 8V6a2 2 0 0 1 2-2h5a2 2 0 0 1 2 2v2" fill="none" stroke="{ink}" stroke-width="2.2"/>\n'
+            f'    <line x1="3" y1="14.5" x2="25" y2="14.5" stroke="{ink}" stroke-width="2"/>\n'
+            f'    <rect x="11.5" y="12.5" width="5" height="4" rx="1" fill="{cream}" stroke="{ink}" stroke-width="1.8"/>\n'
+        )
+    else:  # shuttlecock
+        inner = (
+            f'    <g transform="rotate(-28 14 14)">\n'
+            f'      <polygon points="8,4 20,4 17.5,17 10.5,17" fill="{cream}" stroke="{ink}" stroke-width="2.1" stroke-linejoin="round"/>\n'
+            f'      <line x1="12" y1="4" x2="12.8" y2="17" stroke="{ink}" stroke-width="1.5"/>\n'
+            f'      <line x1="16" y1="4" x2="15.2" y2="17" stroke="{ink}" stroke-width="1.5"/>\n'
+            f'      <rect x="10" y="16" width="8" height="3.2" rx="1" fill="{gd}" stroke="{ink}" stroke-width="1.9"/>\n'
+            f'      <path d="M10.5 19.2h7a3.5 3.5 0 0 1-7 0z" fill="{em}" stroke="{ink}" stroke-width="1.9"/>\n'
+            f"    </g>\n"
+        )
+    return g_open + inner + "  </g>\n"
 
 
 def stat_cartoon_icon(name: str, x: float, y: float, size: float, t: dict[str, str]) -> str:

@@ -13,9 +13,8 @@ from svgkit import (
     chip,
     esc,
     load_data_uri,
-    portrait_charm_code,
-    portrait_charm_shuttlecock,
     project_flat_illustration,
+    snapshot_cartoon_icon,
     stat_cartoon_icon,
     surface_frame,
     svg_doc,
@@ -60,96 +59,88 @@ def _wrap_text(text: str, max_chars: int) -> list[str]:
 
 
 def render_hero(profile: dict[str, Any], t: dict[str, str], theme: str, phone: bool = False) -> str:
-    photo_uri = load_data_uri("profile.jpg")
-    clip_id = f"portrait-clip-{theme}-{'p' if phone else 'd'}"
     focus_icons = ["fullstack", "agents", "ml", "dl"]
+    snapshot = [
+        ("grad", "B.S. CS '26 · 3.94 GPA", "M.S. ML starting Jan '27"),
+        ("work", "SWE Intern @ Deepiri", "AI bug-tracing agent"),
+        ("shuttle", "GMU Badminton App", "Founder · 500+ players"),
+    ]
 
     if not phone:
-        W, H = 880, 242
-        px, py, pr = W - 122, 114, 70
-        defs = f'    <clipPath id="{clip_id}"><circle cx="{px}" cy="{py}" r="{pr}"/></clipPath>\n'
+        W, H = 880, 238
         body = surface_frame(W, H, t, radius=12, fill_key="bg")
 
-        # Clean unboxed editorial kicker
+        # Left editorial column
         body += (
             f'  <text x="36" y="42" font-family="{MONO_FONT}" font-size="11.5" font-weight="600" '
             f'letter-spacing="1.2" fill="{t["secondary"]}">GEORGE MASON CS  ·  BENTRUONG.DEV</text>\n'
         )
-
-        # Bold tight-tracked name
         body += (
             f'  <text x="36" y="96" font-family="{SANS_FONT}" font-size="48" font-weight="800" '
             f'letter-spacing="-1.6" fill="{t["text"]}">{esc(profile["display_name"])}</text>\n'
         )
-
-        # Emerald title
         body += (
             f'  <text x="36" y="128" font-family="{SANS_FONT}" font-size="19" font-weight="600" '
             f'fill="{t["primary"]}">{esc(profile["title"])}</text>\n'
         )
-
-        # Clean intro
         body += (
-            f'  <text x="36" y="156" font-family="{SANS_FONT}" font-size="15" '
+            f'  <text x="36" y="156" font-family="{SANS_FONT}" font-size="14.5" '
             f'fill="{t["muted"]}">{esc(profile["tagline"])}</text>\n'
         )
 
-        # 4 clean outlined focus chips with chunky flat cartoon icons
-        cx, cy = 36, 180
+        # 4 focus chips with chunky flat cartoon icons
+        cx, cy = 36, 178
         for idx, tag in enumerate(profile["tags"]):
             ic = focus_icons[idx % len(focus_icons)]
-            c_svg, cw = chip(cx, cy, tag["label"], t, font_size=12.5, height=30, pad_x=11, icon_name=ic)
+            c_svg, cw = chip(cx, cy, tag["label"], t, font_size=12, height=29, pad_x=10, icon_name=ic)
             body += c_svg
             cx += cw + 8
 
-        # Real portrait photo (mirroring Portrait() on bentruong.dev)
-        body += f'  <circle cx="{px}" cy="{py}" r="{pr + 6}" fill="{t["paper"]}" stroke="{t["secondary"]}" stroke-width="2"/>\n'
+        # Crisp vertical hairline divider + right Snapshot column (no face, no logo)
+        dx = 594
+        body += f'  <line x1="{dx}" y1="28" x2="{dx}" y2="{H - 28}" stroke="{t["divider"]}" stroke-width="1"/>\n'
+        rx = dx + 24
         body += (
-            f'  <image href="{photo_uri}" x="{px - pr}" y="{py - pr}" '
-            f'width="{pr * 2}" height="{pr * 2}" clip-path="url(#{clip_id})" preserveAspectRatio="xMidYMid slice"/>\n'
+            f'  <text x="{rx}" y="42" font-family="{MONO_FONT}" font-size="10.5" font-weight="700" '
+            f'letter-spacing="1.1" fill="{t["secondary"]}">SNAPSHOT</text>\n'
         )
-        # Two playful flat-shaded cartoon charm badges tucked neatly by the portrait
-        body += portrait_charm_shuttlecock(px - pr - 20, py + pr - 34, 46, t)
-        body += portrait_charm_code(px + pr - 26, py - pr - 10, 42, t)
+        for idx, (icon_name, top_txt, sub_txt) in enumerate(snapshot):
+            ry = 62 + idx * 52
+            body += snapshot_cartoon_icon(icon_name, rx, ry, 28, t)
+            body += (
+                f'  <text x="{rx + 38}" y="{ry + 12}" font-family="{SANS_FONT}" font-size="13.5" '
+                f'font-weight="600" fill="{t["text"]}">{esc(top_txt)}</text>\n'
+            )
+            body += (
+                f'  <text x="{rx + 38}" y="{ry + 29}" font-family="{MONO_FONT}" font-size="11.5" '
+                f'fill="{t["muted"]}">{esc(sub_txt)}</text>\n'
+            )
 
-        body += (
-            f'  <text x="{px}" y="{py + pr + 28}" text-anchor="middle" font-family="{MONO_FONT}" '
-            f'font-size="11.5" fill="{t["muted"]}">{esc(profile["domain"])} &#x2197;</text>\n'
-        )
-        return svg_doc(W, H, defs, body, title=f"{profile['display_name']} — {profile['title']}")
+        return svg_doc(W, H, "", body, title=f"{profile['display_name']} — {profile['title']}")
 
-    # Phone layout
-    W, H = 440, 316
-    px, py, pr = W - 66, 68, 40
-    defs = f'    <clipPath id="{clip_id}"><circle cx="{px}" cy="{py}" r="{pr}"/></clipPath>\n'
+    # Phone layout (clean open hero without duplicate face)
+    W, H = 440, 282
     body = surface_frame(W, H, t, radius=12, fill_key="bg")
 
-    body += f'  <circle cx="{px}" cy="{py}" r="{pr + 4}" fill="{t["paper"]}" stroke="{t["secondary"]}" stroke-width="2"/>\n'
     body += (
-        f'  <image href="{photo_uri}" x="{px - pr}" y="{py - pr}" '
-        f'width="{pr * 2}" height="{pr * 2}" clip-path="url(#{clip_id})" preserveAspectRatio="xMidYMid slice"/>\n'
-    )
-    body += portrait_charm_shuttlecock(px - pr - 14, py + pr - 22, 32, t)
-
-    body += (
-        f'  <text x="24" y="38" font-family="{MONO_FONT}" font-size="10.5" font-weight="600" '
-        f'letter-spacing="1.0" fill="{t["secondary"]}">BENTRUONG.DEV</text>\n'
+        f'  <text x="24" y="36" font-family="{MONO_FONT}" font-size="10.5" font-weight="600" '
+        f'letter-spacing="1.0" fill="{t["secondary"]}">GEORGE MASON CS · BENTRUONG.DEV</text>\n'
     )
     body += (
-        f'  <text x="24" y="84" font-family="{SANS_FONT}" font-size="34" font-weight="800" '
+        f'  <text x="24" y="82" font-family="{SANS_FONT}" font-size="36" font-weight="800" '
         f'letter-spacing="-1.2" fill="{t["text"]}">{esc(profile["display_name"])}</text>\n'
     )
     body += (
-        f'  <text x="24" y="112" font-family="{SANS_FONT}" font-size="17" font-weight="600" '
+        f'  <text x="24" y="110" font-family="{SANS_FONT}" font-size="17" font-weight="600" '
         f'fill="{t["primary"]}">{esc(profile["title"])}</text>\n'
     )
     for idx, line in enumerate(_wrap_text(profile["tagline"], 44)[:2]):
         body += (
-            f'  <text x="24" y="{144 + idx * 21}" font-family="{SANS_FONT}" font-size="14" '
+            f'  <text x="24" y="{140 + idx * 20}" font-family="{SANS_FONT}" font-size="14" '
             f'fill="{t["muted"]}">{esc(line)}</text>\n'
         )
 
-    cx, cy = 24, 198
+    cx, cy = 24, 192
     for idx, tag in enumerate(profile["tags"]):
         ic = focus_icons[idx % len(focus_icons)]
         c_svg, cw = chip(cx, cy, tag["label"], t, font_size=12, height=30, pad_x=10, icon_name=ic)
@@ -160,7 +151,7 @@ def render_hero(profile: dict[str, Any], t: dict[str, str], theme: str, phone: b
         body += c_svg
         cx += cw + 8
 
-    return svg_doc(W, H, defs, body, title=f"{profile['display_name']} — {profile['title']}")
+    return svg_doc(W, H, "", body, title=f"{profile['display_name']} — {profile['title']}")
 
 
 def render_badge(link: dict[str, Any], t: dict[str, str]) -> str:

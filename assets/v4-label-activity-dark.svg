@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="44" viewBox="0 0 880 44" fill="none" role="img">
+  <title>Activity</title>
+  <text x="2" y="26" font-family="'JetBrains Mono', Consolas, ui-monospace, SFMono-Regular, Menlo, monospace" font-size="12" font-weight="700" letter-spacing="1.2" fill="#D9B45A">01</text>
+  <text x="30" y="27" font-family="'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif" font-size="21" font-weight="700" letter-spacing="-0.4" fill="#E8EEEA">Activity</text>
+  <text x="878" y="26" text-anchor="end" font-family="'JetBrains Mono', Consolas, ui-monospace, SFMono-Regular, Menlo, monospace" font-size="12" fill="#A2B1A8">redrawn nightly via GitHub Actions</text>
+  <line x1="2" y1="40" x2="878" y2="40" stroke="#25312A" stroke-width="1"/>
+  <line x1="2" y1="40" x2="64" y2="40" stroke="#4CC38A" stroke-width="2"/>
+</svg>

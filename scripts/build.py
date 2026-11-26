@@ -23,7 +23,7 @@ ASSETS = ROOT / "assets"
 PROFILE_PATH = ROOT / "profile.json"
 TOKENS_PATH = ROOT / "scripts" / "tokens.json"
 README_PATH = ROOT / "README.md"
-ASSET_PREFIX = "showcase-"
+ASSET_PREFIX = "v4-"
 
 
 def _picture(stem: str, alt: str, width: str = "100%", has_phone: bool = True, height: str | None = None) -> str:
@@ -47,7 +47,6 @@ def build() -> None:
     state = fetch_profile_stats(profile)
 
     ASSETS.mkdir(parents=True, exist_ok=True)
-    # Remove any stale SVG files from earlier designs
     for old in ASSETS.glob("*.svg"):
         old.unlink()
 
@@ -57,16 +56,10 @@ def build() -> None:
         _write_svg(f"hero-phone-{theme}.svg", render_hero(profile, t, theme, phone=True))
 
         for link in profile["links"]:
-            _write_svg(f"badge-{link['id']}-{theme}.svg", render_badge(link, t, theme=theme))
+            _write_svg(f"badge-{link['id']}-{theme}.svg", render_badge(link, t))
 
-        _write_svg(
-            f"label-activity-{theme}.svg",
-            render_section_header("01", "Activity", "redrawn nightly via GitHub Actions", t, theme=theme, phone=False),
-        )
-        _write_svg(
-            f"label-activity-phone-{theme}.svg",
-            render_section_header("01", "Activity", "", t, theme=theme, phone=True),
-        )
+        _write_svg(f"label-activity-{theme}.svg", render_section_header("01", "Activity", "redrawn nightly via GitHub Actions", t, phone=False))
+        _write_svg(f"label-activity-phone-{theme}.svg", render_section_header("01", "Activity", "", t, phone=True))
 
         _write_svg(f"github-{theme}.svg", render_github_stats(state, t, theme, phone=False))
         _write_svg(f"github-phone-{theme}.svg", render_github_stats(state, t, theme, phone=True))
@@ -101,14 +94,8 @@ def build() -> None:
                 render_heatmap(cal["days"], cal["total"], f"contributions in {yr}", t, theme, yr, show_numbers=False, phone=True),
             )
 
-        _write_svg(
-            f"label-work-{theme}.svg",
-            render_section_header("02", "Work", "featured full-stack & AI projects", t, theme=theme, phone=False),
-        )
-        _write_svg(
-            f"label-work-phone-{theme}.svg",
-            render_section_header("02", "Work", "", t, theme=theme, phone=True),
-        )
+        _write_svg(f"label-work-{theme}.svg", render_section_header("02", "Work", "featured full-stack & AI projects", t, phone=False))
+        _write_svg(f"label-work-phone-{theme}.svg", render_section_header("02", "Work", "", t, phone=True))
 
         repo_stars = state.get("repo_stars", {})
         for proj in profile["projects"]:
@@ -123,7 +110,7 @@ def build() -> None:
 
     badge_lines = ['<p align="center">']
     for link in profile["links"]:
-        b_pic = _picture(f"badge-{link['id']}", link["label"], has_phone=False, height="44")
+        b_pic = _picture(f"badge-{link['id']}", link["label"], has_phone=False, height="40")
         badge_lines.append(f'<a href="{link["url"]}">{b_pic}</a>')
     badge_lines.append("</p>")
     blocks.append("\n".join(badge_lines))

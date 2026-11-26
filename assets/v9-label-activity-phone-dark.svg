@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="440" height="52" viewBox="0 0 440 52" fill="none" role="img">
+  <title>Activity</title>
+  <rect x="5" y="13" width="34" height="26" rx="7" fill="#06120D"/>
+  <rect x="2" y="10" width="34" height="26" rx="7" fill="#E2BE66" stroke="#06120D" stroke-width="2"/>
+  <text x="19" y="27.5" text-anchor="middle" font-family="'JetBrains Mono', Consolas, ui-monospace, SFMono-Regular, Menlo, monospace" font-size="13" font-weight="800" fill="#06120D">01</text>
+  <text x="48" y="31" font-family="'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif" font-size="24" font-weight="800" letter-spacing="-0.6" fill="#ECF3EF">Activity</text>
+  <line x1="2" y1="48" x2="438" y2="48" stroke="#284638" stroke-width="1"/>
+</svg>

@@ -165,6 +165,21 @@ def badge_cartoon_icon(name: str, x: float, y: float, size: float, t: dict[str, 
             f'    <rect x="2.5" y="5" width="19" height="14" rx="3" fill="{gd}" stroke="{ink}" stroke-width="2.1"/>\n'
             f'    <path d="M3.5 6.5l8.5 6.5 8.5-6.5" fill="none" stroke="{ink}" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"/>\n'
         )
+    elif name == "folder":
+        inner = (
+            f'    <path d="M3 7a2 2 0 0 1 2-2h4.5l2 2H19a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7z" '
+            f'fill="{em}" stroke="{ink}" stroke-width="2.1" stroke-linejoin="round"/>\n'
+        )
+    elif name == "star":
+        inner = (
+            f'    <path d="M12 2.8l2.9 5.9 6.5.9-4.7 4.6 1.1 6.5L12 17.6 6.2 20.7l1.1-6.5-4.7-4.6 6.5-.9L12 2.8z" '
+            f'fill="{gd}" stroke="{ink}" stroke-width="2" stroke-linejoin="round"/>\n'
+        )
+    elif name == "bolt_sm":
+        inner = (
+            f'    <path d="M13 2L4.5 13.5H12L11 22l8.5-11.5H12L13 2z" '
+            f'fill="{cream}" stroke="{ink}" stroke-width="2" stroke-linejoin="round"/>\n'
+        )
     else:
         inner = (
             f'    <path d="M7 17L17 7M9 7h8v8" stroke="{t["muted"]}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>\n'

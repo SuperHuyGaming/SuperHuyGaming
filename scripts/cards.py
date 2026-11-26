@@ -180,26 +180,28 @@ def render_badge(link: dict[str, Any], t: dict[str, str]) -> str:
 
 
 def render_section_header(index: str, title: str, right_note: str, t: dict[str, str], phone: bool = False) -> str:
-    """Plain open editorial typography on transparent canvas — NO outer box, NO pills, NO dashed lines."""
+    """Tactile Forest-Studio section header (Sketch C): gold index block with hard offset + bold heading."""
     W = 440 if phone else 880
-    H = 44
+    H = 52
+    ink = "#06120D"
     body = (
-        f'  <text x="2" y="26" font-family="{MONO_FONT}" font-size="12" font-weight="700" '
-        f'letter-spacing="1.2" fill="{t["secondary"]}">{esc(index)}</text>\n'
-        f'  <text x="30" y="27" font-family="{SANS_FONT}" font-size="21" font-weight="700" '
-        f'letter-spacing="-0.4" fill="{t["text"]}">{esc(title)}</text>\n'
+        f'  <rect x="5" y="13" width="34" height="26" rx="7" fill="{ink}"/>\n'
+        f'  <rect x="2" y="10" width="34" height="26" rx="7" fill="{t["secondary"]}" stroke="{ink}" stroke-width="2"/>\n'
+        f'  <text x="19" y="27.5" text-anchor="middle" font-family="{MONO_FONT}" font-size="13" font-weight="800" fill="{ink}">{esc(index)}</text>\n'
+        f'  <text x="48" y="31" font-family="{SANS_FONT}" font-size="{24 if phone else 26}" font-weight="800" '
+        f'letter-spacing="-0.6" fill="{t["text"]}">{esc(title)}</text>\n'
     )
     if right_note and not phone:
         body += (
-            f'  <text x="{W - 2}" y="26" text-anchor="end" font-family="{MONO_FONT}" '
+            f'  <text x="{W - 2}" y="29" text-anchor="end" font-family="{MONO_FONT}" '
             f'font-size="12" fill="{t["muted"]}">{esc(right_note)}</text>\n'
         )
-    body += f'  <line x1="2" y1="40" x2="{W - 2}" y2="40" stroke="{t["divider"]}" stroke-width="1"/>\n'
-    body += f'  <line x1="2" y1="40" x2="64" y2="40" stroke="{t["primary"]}" stroke-width="2"/>\n'
+    body += f'  <line x1="2" y1="48" x2="{W - 2}" y2="48" stroke="{t["divider"]}" stroke-width="1"/>\n'
     return svg_doc(W, H, "", body, title=title)
 
 
 def render_github_stats(state: dict[str, Any], t: dict[str, str], theme: str, phone: bool = False) -> str:
+    """Tactile Forest-Studio stats board (Sketch C) for both dark and light themes."""
     cur_streak = state["current_streak"]
     if cur_streak >= 2:
         slot2 = {
@@ -241,83 +243,130 @@ def render_github_stats(state: dict[str, Any], t: dict[str, str], theme: str, ph
         },
     ]
 
-    footer = (
-        f"{state['public_repos']} public repos  ·  "
-        f"{state['stars_earned']} stars earned  ·  "
-        f"{state['active_days_year']} active days (1y)  ·  "
-        f"updated {_fmt_date(state['fetched_at'])}"
-    )
+    if theme == "dark":
+        ink = "#06120D"
+        card_fills = ["#1C563F", "#5C451A", "#1B4E56", "#35492A"]
+        mini_fills = ["#1B4E56", "#5C451A", "#1C563F"]
+        eyebrow_c = "#E8F5EE"
+        val_c = "#FFFFFF"
+        sub_c = "#D5E8DE"
+    else:
+        ink = "#13221B"
+        card_fills = ["#CFEAD9", "#F6E5B8", "#CCE8EC", "#DCE9CA"]
+        mini_fills = ["#CCE8EC", "#F6E5B8", "#CFEAD9"]
+        eyebrow_c = "#234031"
+        val_c = "#102119"
+        sub_c = "#2F4A3C"
+
+    minis = [
+        ("folder", _fmt_num(state["public_repos"]), "public repos"),
+        ("star", _fmt_num(state["stars_earned"]), "stars earned"),
+        ("bolt_sm", _fmt_num(state["active_days_year"]), "active days (1y)"),
+    ]
 
     if not phone:
-        W, H = 880, 180
-        body = surface_frame(W, H, t, radius=12, fill_key="bg")
+        W, H = 880, 240
+        body = surface_frame(W, H, t, radius=16, fill_key="bg")
 
         gap = 14
         pad = 20
         cw = (W - pad * 2 - gap * 3) / 4
-        ch = 114
+        ch = 134
         cy = 18
 
         for idx, c in enumerate(cards):
             cx = pad + idx * (cw + gap)
             body += (
-                f'  <rect x="{cx:.1f}" y="{cy}" width="{cw:.1f}" height="{ch}" rx="10" '
-                f'fill="{t["paper"]}" stroke="{t["divider"]}" stroke-width="1"/>\n'
+                f'  <rect x="{cx + 4:.1f}" y="{cy + 4}" width="{cw:.1f}" height="{ch}" rx="14" fill="{ink}"/>\n'
+                f'  <rect x="{cx:.1f}" y="{cy}" width="{cw:.1f}" height="{ch}" rx="14" '
+                f'fill="{card_fills[idx]}" stroke="{ink}" stroke-width="2.2"/>\n'
             )
-            body += stat_cartoon_icon(c["icon"], cx + cw - 46, cy + 14, 32, t)
+            body += stat_cartoon_icon(c["icon"], cx + cw - 50, cy + 14, 38, t)
             body += (
-                f'  <text x="{cx + 16:.1f}" y="{cy + 27}" font-family="{MONO_FONT}" font-size="10.5" '
-                f'font-weight="600" letter-spacing="0.8" fill="{t["muted"]}">{esc(c["eyebrow"])}</text>\n'
-            )
-            body += (
-                f'  <text x="{cx + 16:.1f}" y="{cy + 69}" font-family="{SANS_FONT}" font-size="31" '
-                f'font-weight="800" letter-spacing="-0.8" fill="{t["text"]}">{esc(c["value"])}</text>\n'
+                f'  <text x="{cx + 16:.1f}" y="{cy + 30}" font-family="{MONO_FONT}" font-size="10.5" '
+                f'font-weight="700" letter-spacing="0.8" fill="{eyebrow_c}" fill-opacity="0.85">{esc(c["eyebrow"])}</text>\n'
             )
             body += (
-                f'  <text x="{cx + 16:.1f}" y="{cy + 93}" font-family="{SANS_FONT}" font-size="12.5" '
-                f'fill="{t["muted"]}">{esc(c["sub"])}</text>\n'
+                f'  <text x="{cx + 16:.1f}" y="{cy + 84}" font-family="{SANS_FONT}" font-size="38" '
+                f'font-weight="800" letter-spacing="-1.0" fill="{val_c}">{esc(c["value"])}</text>\n'
+            )
+            body += (
+                f'  <text x="{cx + 16:.1f}" y="{cy + 111}" font-family="{SANS_FONT}" font-size="13" '
+                f'fill="{sub_c}">{esc(c["sub"])}</text>\n'
             )
 
-        # Plain clean footer text (no row of pill boxes)
-        body += (
-            f'  <text x="{W / 2:.1f}" y="158" text-anchor="middle" font-family="{MONO_FONT}" '
-            f'font-size="12" fill="{t["muted"]}">{esc(footer)}</text>\n'
-        )
+        # 3 tactile mini-cards across bottom
+        fw = (W - pad * 2 - gap * 2) / 3
+        fy = 172
+        fh = 46
+        for idx, (ic, val, lbl) in enumerate(minis):
+            fx = pad + idx * (fw + gap)
+            vw = approx_text_width(val, 22, bold=True)
+            body += (
+                f'  <rect x="{fx + 3:.1f}" y="{fy + 3}" width="{fw:.1f}" height="{fh}" rx="11" fill="{ink}"/>\n'
+                f'  <rect x="{fx:.1f}" y="{fy}" width="{fw:.1f}" height="{fh}" rx="11" '
+                f'fill="{mini_fills[idx]}" stroke="{ink}" stroke-width="2"/>\n'
+            )
+            body += badge_cartoon_icon(ic, fx + 16, fy + 13, 21, t)
+            body += (
+                f'  <text x="{fx + 46:.1f}" y="{fy + 30}" font-family="{SANS_FONT}" font-size="22" '
+                f'font-weight="800" fill="{val_c}">{esc(val)}</text>\n'
+            )
+            body += (
+                f'  <text x="{fx + 54 + vw:.1f}" y="{fy + 28.5}" font-family="{MONO_FONT}" font-size="12.5" '
+                f'fill="{sub_c}">{esc(lbl)}</text>\n'
+            )
+
         return svg_doc(W, H, "", body, title="GitHub Activity Stats")
 
-    # Phone layout
-    W, H = 440, 296
-    body = surface_frame(W, H, t, radius=12, fill_key="bg")
-    cw = 194
-    ch = 106
+    # Phone layout (2x2 tactile cards + 3 stacked tactile mini-cards)
+    W, H = 440, 444
+    body = surface_frame(W, H, t, radius=16, fill_key="bg")
+    cw = 192
+    ch = 116
     for idx, c in enumerate(cards):
         col = idx % 2
         row = idx // 2
         cx = 18 + col * (cw + 16)
-        cy = 18 + row * (ch + 14)
+        cy = 18 + row * (ch + 16)
         body += (
-            f'  <rect x="{cx}" y="{cy}" width="{cw}" height="{ch}" rx="10" '
-            f'fill="{t["paper"]}" stroke="{t["divider"]}" stroke-width="1"/>\n'
+            f'  <rect x="{cx + 3.5}" y="{cy + 3.5}" width="{cw}" height="{ch}" rx="13" fill="{ink}"/>\n'
+            f'  <rect x="{cx}" y="{cy}" width="{cw}" height="{ch}" rx="13" '
+            f'fill="{card_fills[idx]}" stroke="{ink}" stroke-width="2"/>\n'
         )
-        body += stat_cartoon_icon(c["icon"], cx + cw - 38, cy + 12, 26, t)
+        body += stat_cartoon_icon(c["icon"], cx + cw - 40, cy + 12, 30, t)
         body += (
-            f'  <text x="{cx + 14}" y="{cy + 25}" font-family="{MONO_FONT}" font-size="10" '
-            f'font-weight="600" letter-spacing="0.7" fill="{t["muted"]}">{esc(c["eyebrow"])}</text>\n'
-        )
-        body += (
-            f'  <text x="{cx + 14}" y="{cy + 64}" font-family="{SANS_FONT}" font-size="27" '
-            f'font-weight="800" fill="{t["text"]}">{esc(c["value"])}</text>\n'
+            f'  <text x="{cx + 14}" y="{cy + 27}" font-family="{MONO_FONT}" font-size="10" '
+            f'font-weight="700" letter-spacing="0.7" fill="{eyebrow_c}" fill-opacity="0.85">{esc(c["eyebrow"])}</text>\n'
         )
         body += (
-            f'  <text x="{cx + 14}" y="{cy + 86}" font-family="{SANS_FONT}" font-size="12" '
-            f'fill="{t["muted"]}">{esc(c["sub"])}</text>\n'
+            f'  <text x="{cx + 14}" y="{cy + 74}" font-family="{SANS_FONT}" font-size="31" '
+            f'font-weight="800" letter-spacing="-0.8" fill="{val_c}">{esc(c["value"])}</text>\n'
+        )
+        body += (
+            f'  <text x="{cx + 14}" y="{cy + 98}" font-family="{SANS_FONT}" font-size="12" '
+            f'fill="{sub_c}">{esc(c["sub"])}</text>\n'
         )
 
-    short_footer = f"{state['public_repos']} repos · {state['stars_earned']} stars · {state['active_days_year']} active days"
-    body += (
-        f'  <text x="{W / 2:.1f}" y="276" text-anchor="middle" font-family="{MONO_FONT}" '
-        f'font-size="11.5" fill="{t["muted"]}">{esc(short_footer)}</text>\n'
-    )
+    fy = 286
+    for idx, (ic, val, lbl) in enumerate(minis):
+        vw = approx_text_width(val, 20, bold=True)
+        body += (
+            f'  <rect x="21" y="{fy + 3}" width="{W - 38}" height="42" rx="10" fill="{ink}"/>\n'
+            f'  <rect x="18" y="{fy}" width="{W - 38}" height="42" rx="10" '
+            f'fill="{mini_fills[idx]}" stroke="{ink}" stroke-width="2"/>\n'
+        )
+        body += badge_cartoon_icon(ic, 32, fy + 11, 20, t)
+        body += (
+            f'  <text x="62" y="{fy + 27.5}" font-family="{SANS_FONT}" font-size="20" '
+            f'font-weight="800" fill="{val_c}">{esc(val)}</text>\n'
+        )
+        body += (
+            f'  <text x="{70 + vw:.1f}" y="{fy + 26.5}" font-family="{MONO_FONT}" font-size="12.5" '
+            f'fill="{sub_c}">{esc(lbl)}</text>\n'
+        )
+        fy += 50
+
     return svg_doc(W, H, "", body, title="GitHub Activity Stats")
 
 

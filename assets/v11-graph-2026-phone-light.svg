@@ -16,7 +16,6 @@
   <text x="142.5" y="76" font-family="'JetBrains Mono', Consolas, ui-monospace, SFMono-Regular, Menlo, monospace" font-size="11" fill="#4F6358">Sep</text>
   <text x="232.5" y="76" font-family="'JetBrains Mono', Consolas, ui-monospace, SFMono-Regular, Menlo, monospace" font-size="11" fill="#4F6358">Oct</text>
   <text x="322.5" y="76" font-family="'JetBrains Mono', Consolas, ui-monospace, SFMono-Regular, Menlo, monospace" font-size="11" fill="#4F6358">Nov</text>
-  <rect x="30.0" y="198.5" width="20.0" height="20.0" rx="4" fill="#E6EFEA"/>
   <rect x="30.0" y="221.0" width="20.0" height="20.0" rx="4" fill="#E6EFEA"/>
   <rect x="52.5" y="86.0" width="20.0" height="20.0" rx="4" fill="#E6EFEA"/>
   <rect x="52.5" y="108.5" width="20.0" height="20.0" rx="4" fill="#E6EFEA"/>
@@ -128,4 +127,5 @@
   <rect x="390.0" y="131.0" width="20.0" height="20.0" rx="4" fill="#BBE5CE"/>
   <rect x="390.0" y="153.5" width="20.0" height="20.0" rx="4" fill="#E6EFEA"/>
   <rect x="390.0" y="176.0" width="20.0" height="20.0" rx="4" fill="#E6EFEA"/>
+  <rect x="390.0" y="198.5" width="20.0" height="20.0" rx="4" fill="#E6EFEA"/>
 </svg>

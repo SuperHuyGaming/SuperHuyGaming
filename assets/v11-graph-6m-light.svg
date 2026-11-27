@@ -26,8 +26,6 @@
   <text x="485.5" y="80" font-family="'JetBrains Mono', Consolas, ui-monospace, SFMono-Regular, Menlo, monospace" font-size="12" fill="#4F6358">Sep</text>
   <text x="601.5" y="80" font-family="'JetBrains Mono', Consolas, ui-monospace, SFMono-Regular, Menlo, monospace" font-size="12" fill="#4F6358">Oct</text>
   <text x="717.5" y="80" font-family="'JetBrains Mono', Consolas, ui-monospace, SFMono-Regular, Menlo, monospace" font-size="12" fill="#4F6358">Nov</text>
-  <rect x="50.5" y="206.0" width="25.0" height="25.0" rx="4" fill="#E6EFEA"/>
-  <text x="63.0" y="221.8" text-anchor="middle" font-family="'JetBrains Mono', Consolas, ui-monospace, SFMono-Regular, Menlo, monospace" font-size="9.5" font-weight="400" fill="#8FA398">0</text>
   <rect x="50.5" y="235.0" width="25.0" height="25.0" rx="4" fill="#E6EFEA"/>
   <text x="63.0" y="250.8" text-anchor="middle" font-family="'JetBrains Mono', Consolas, ui-monospace, SFMono-Regular, Menlo, monospace" font-size="9.5" font-weight="400" fill="#8FA398">0</text>
   <rect x="50.5" y="264.0" width="25.0" height="25.0" rx="4" fill="#E6EFEA"/>
@@ -392,4 +390,6 @@
   <text x="817.0" y="192.8" text-anchor="middle" font-family="'JetBrains Mono', Consolas, ui-monospace, SFMono-Regular, Menlo, monospace" font-size="9.5" font-weight="400" fill="#8FA398">0</text>
   <rect x="804.5" y="206.0" width="25.0" height="25.0" rx="4" fill="#E6EFEA"/>
   <text x="817.0" y="221.8" text-anchor="middle" font-family="'JetBrains Mono', Consolas, ui-monospace, SFMono-Regular, Menlo, monospace" font-size="9.5" font-weight="400" fill="#8FA398">0</text>
+  <rect x="804.5" y="235.0" width="25.0" height="25.0" rx="4" fill="#E6EFEA"/>
+  <text x="817.0" y="250.8" text-anchor="middle" font-family="'JetBrains Mono', Consolas, ui-monospace, SFMono-Regular, Menlo, monospace" font-size="9.5" font-weight="400" fill="#8FA398">0</text>
 </svg>

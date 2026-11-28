@@ -22,7 +22,7 @@
     <rect x="16" y="24" width="11" height="3.5" rx="1" fill="#06120D" fill-opacity="0.22"/>
   </g>
   <text x="32" y="45" font-family="'JetBrains Mono', Consolas, ui-monospace, SFMono-Regular, Menlo, monospace" font-size="10" font-weight="700" letter-spacing="0.7" fill="#E8F5EE" fill-opacity="0.85">LAST 12 MONTHS</text>
-  <text x="32" y="92" font-family="'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif" font-size="31" font-weight="800" letter-spacing="-0.8" fill="#FFFFFF">776</text>
+  <text x="32" y="92" font-family="'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif" font-size="31" font-weight="800" letter-spacing="-0.8" fill="#FFFFFF">784</text>
   <text x="32" y="116" font-family="'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif" font-size="12" fill="#D5E8DE">total contributions</text>
   <rect x="229.5" y="21.5" width="192" height="116" rx="13" fill="#06120D"/>
   <rect x="226" y="18" width="192" height="116" rx="13" fill="#5C451A" stroke="#06120D" stroke-width="2"/>
@@ -30,7 +30,7 @@
     <path d="M20 4L8 20h9l-1.5 12L28 16h-9L20 4z" fill="#E2BE66" stroke="#06120D" stroke-width="2.4" stroke-linejoin="round"/>
   </g>
   <text x="240" y="45" font-family="'JetBrains Mono', Consolas, ui-monospace, SFMono-Regular, Menlo, monospace" font-size="10" font-weight="700" letter-spacing="0.7" fill="#E8F5EE" fill-opacity="0.85">ACTIVE DAYS (1Y)</text>
-  <text x="240" y="92" font-family="'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif" font-size="31" font-weight="800" letter-spacing="-0.8" fill="#FFFFFF">56 days</text>
+  <text x="240" y="92" font-family="'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif" font-size="31" font-weight="800" letter-spacing="-0.8" fill="#FFFFFF">57 days</text>
   <text x="240" y="116" font-family="'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif" font-size="12" fill="#D5E8DE">shipped in last year</text>
   <rect x="21.5" y="153.5" width="192" height="116" rx="13" fill="#06120D"/>
   <rect x="18" y="150" width="192" height="116" rx="13" fill="#1B4E56" stroke="#06120D" stroke-width="2"/>
@@ -51,7 +51,7 @@
     <rect x="24" y="5" width="7" height="26" rx="2" fill="#FAFAF7" stroke="#06120D" stroke-width="2.3"/>
   </g>
   <text x="240" y="177" font-family="'JetBrains Mono', Consolas, ui-monospace, SFMono-Regular, Menlo, monospace" font-size="10" font-weight="700" letter-spacing="0.7" fill="#E8F5EE" fill-opacity="0.85">SINCE 2022</text>
-  <text x="240" y="224" font-family="'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif" font-size="31" font-weight="800" letter-spacing="-0.8" fill="#FFFFFF">916</text>
+  <text x="240" y="224" font-family="'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif" font-size="31" font-weight="800" letter-spacing="-0.8" fill="#FFFFFF">924</text>
   <text x="240" y="248" font-family="'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif" font-size="12" fill="#D5E8DE">all-time contributions</text>
   <rect x="21" y="289" width="402" height="42" rx="10" fill="#06120D"/>
   <rect x="18" y="286" width="402" height="42" rx="10" fill="#1B4E56" stroke="#06120D" stroke-width="2"/>
@@ -72,6 +72,6 @@
   <g transform="translate(32.0,397.0) scale(0.833)">
     <path d="M13 2L4.5 13.5H12L11 22l8.5-11.5H12L13 2z" fill="#FAFAF7" stroke="#06120D" stroke-width="2" stroke-linejoin="round"/>
   </g>
-  <text x="62" y="413.5" font-family="'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif" font-size="20" font-weight="800" fill="#FFFFFF">56</text>
+  <text x="62" y="413.5" font-family="'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif" font-size="20" font-weight="800" fill="#FFFFFF">57</text>
   <text x="92.8" y="412.5" font-family="'JetBrains Mono', Consolas, ui-monospace, SFMono-Regular, Menlo, monospace" font-size="12.5" fill="#D5E8DE">active days (1y)</text>
 </svg>

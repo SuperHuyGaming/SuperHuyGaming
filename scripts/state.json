@@ -1,15 +1,15 @@
 {
-  "fetched_at": "2026-11-27",
+  "fetched_at": "2026-11-28",
   "user": "SuperHuyGaming",
   "created_year": 2022,
   "public_repos": 24,
   "stars_earned": 6,
   "followers": 4,
-  "active_days_year": 56,
-  "last_year_contributions": 776,
-  "all_time_contributions": 916,
-  "current_streak": 0,
-  "current_streak_start": null,
+  "active_days_year": 57,
+  "last_year_contributions": 784,
+  "all_time_contributions": 924,
+  "current_streak": 1,
+  "current_streak_start": "2026-11-27",
   "longest_streak": 11,
   "repo_stars": {
     "SuperHuyGaming": 0,
@@ -38,12 +38,8 @@
     "mech-royale": 0
   },
   "calendar_6m": {
-    "total": 767,
+    "total": 775,
     "days": [
-      {
-        "date": "2026-05-29",
-        "count": 0
-      },
       {
         "date": "2026-05-30",
         "count": 0
@@ -770,12 +766,16 @@
       },
       {
         "date": "2026-11-27",
+        "count": 8
+      },
+      {
+        "date": "2026-11-28",
         "count": 0
       }
     ]
   },
   "calendar_12m": {
-    "total": 776,
+    "total": 784,
     "days": [
       {
         "date": "2025-11-23",
@@ -2255,13 +2255,17 @@
       },
       {
         "date": "2026-11-27",
+        "count": 8
+      },
+      {
+        "date": "2026-11-28",
         "count": 0
       }
     ]
   },
   "yearly": {
     "2026": {
-      "total": 776,
+      "total": 784,
       "days": [
         {
           "date": "2026-01-01",
@@ -3585,6 +3589,10 @@
         },
         {
           "date": "2026-11-27",
+          "count": 8
+        },
+        {
+          "date": "2026-11-28",
           "count": 0
         }
       ]
